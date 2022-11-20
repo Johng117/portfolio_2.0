@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  background: url("../../src/assets/home_background_mobile2.jpg") no-repeat
+    fixed;
+  background-size: cover;
+  height: auto;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  p {
+    color: white;
+    padding-right: 10px;
+  }
+}
