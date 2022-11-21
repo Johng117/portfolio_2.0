@@ -2,7 +2,7 @@ import Hamburger from "./Hamburger";
 
 const Navbar = () => {
     return ( 
-        <div class="nav">
+        <div className="nav">
             <Hamburger />
         </div>
      );
