@@ -1,10 +1,15 @@
 body {
+  height: 100%;
   margin: 0;
-  background: url("../../src/assets/home_background_mobile2.jpg") no-repeat fixed;
+}
+
+.main-section {
+  margin: 0;
+  background: url("../../src/assets/home_background_mobile2.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
-  height: 1vh;
+  height: 700px;
   width: auto;
-  position: relative;
 }
 
 .nav {
@@ -84,6 +89,11 @@ body {
   opacity: 0.5;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.projects {
+  height: 100%;
+  width: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

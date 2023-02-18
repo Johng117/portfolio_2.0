@@ -1,13 +1,12 @@
-import Navbar from './components/Navbar';
-import Menu from './components/Menu'
+import Main from "./components/Main";
+import Projects from "./components/Projects";
+import "materialize-css/dist/css/materialize.min.css";
 
 function App() {
   return (
     <div className="App">
-      <div>
-        <Navbar />
-        <Menu />
-      </div>
+      <Main />
+      <Projects />
     </div>
   );
 }
