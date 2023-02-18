@@ -1,5 +1,6 @@
 import Main from "./components/Main";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 import "materialize-css/dist/css/materialize.min.css";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Main />
       <Projects />
+      <Footer />
     </div>
   );
 }
