@@ -1,9 +1,10 @@
 import Navbar from "./Navbar";
 import Menu from "./Menu";
+import Projects from "./Menu";
 
-const Main = () => {
+const Start = () => {
   return (
-    <div className="main-section">
+    <div className="start-section">
       <div>
         <Navbar />
         <Menu />
@@ -12,4 +13,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Start;

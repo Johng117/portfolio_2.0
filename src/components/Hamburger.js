@@ -2,9 +2,9 @@ import { useState } from "react";
 
 const Hamburger = () => {
   const [menuOpen, setMenuOpen] = useState(true);
+
   // a function to change the state of hamburger icon when clicked.
   function handleMenuClick() {
-    console.log("click", "john");
     setMenuOpen(!menuOpen);
   }
 
