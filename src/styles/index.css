@@ -98,16 +98,16 @@ body {
   height: 240px;
   width: 240px;
   padding-top: 10px;
-  border: 4px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
-.option:hover img {
-  background: white;
+.option:hover {
+  background-color: rgba(255, 255, 255, 0.2509803922);
+  cursor: pointer;
 }
 
 .footer {
