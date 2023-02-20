@@ -1,5 +1,7 @@
 import Option from "./Option";
+import Social from "./Social";
 import adjustable from "../assets/adjustable-wrench (1).png";
+import bio from "../assets/biography.png"
 
 const Menu = () => {
   return (
@@ -11,8 +13,14 @@ const Menu = () => {
         optClass="adjustable"
         optName="Projects"
       />
-      <Option />
-      <Option />
+      <Option
+        optIcon={bio}
+        optAlt="icon to represent biographical information"
+        optHeight="150px"
+        optClass="bio"
+        optName="About/Contact"
+      />
+      <Social />
     </div>
   );
 };

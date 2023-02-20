@@ -88,13 +88,12 @@ body {
   color: white;
   top: 150px;
   left: 12.5%;
-  border: 5px solid white;
   display: flex;
   padding: 50px;
   justify-content: space-around;
 }
 
-.option {
+.option, .social {
   height: 240px;
   width: 240px;
   padding-top: 10px;
@@ -102,12 +101,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 15px;
+  border-radius: 30px;
 }
 
-.option:hover {
+.option:hover, .social:hover {
   background-color: rgba(255, 255, 255, 0.2509803922);
   cursor: pointer;
+}
+
+.bio {
+  padding-left: 25px;
 }
 
 .footer {

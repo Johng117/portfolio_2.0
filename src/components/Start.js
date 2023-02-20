@@ -1,6 +1,5 @@
 import Navbar from "./Navbar";
 import Menu from "./Menu";
-import Projects from "./Menu";
 
 const Start = () => {
   return (
