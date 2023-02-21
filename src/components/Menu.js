@@ -1,5 +1,6 @@
 import Option from "./Option";
 import Social from "./Social";
+import linkedin from "../assets/linkedin (1).png"
 import adjustable from "../assets/adjustable-wrench (1).png";
 import bio from "../assets/biography.png"
 
@@ -20,7 +21,12 @@ const Menu = () => {
         optClass="bio"
         optName="About/Contact"
       />
-      <Social />
+      <Social 
+        linIcon={linkedin}
+        socHeight="50px"
+        socName="Social Media"
+        
+      />
     </div>
   );
 };
