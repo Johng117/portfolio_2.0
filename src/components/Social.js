@@ -5,7 +5,7 @@ const Social = ({ linIcon, socHeight, socName }) => {
         <img src={linIcon} height={socHeight} />
       </a>
       <img />
-      <h5>{socName}</h5>
+      <p>{socName}</p>
     </div>
   );
 };

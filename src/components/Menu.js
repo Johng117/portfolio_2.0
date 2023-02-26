@@ -10,20 +10,20 @@ const Menu = () => {
       <Option
         optIcon={adjustable}
         optAlt="icon to represent work being done"
-        optHeight="150px"
+        optHeight="100px"
         optClass="adjustable"
         optName="Projects"
       />
       <Option
         optIcon={bio}
         optAlt="icon to represent biographical information"
-        optHeight="150px"
+        optHeight="100px"
         optClass="bio"
         optName="About/Contact"
       />
       <Social 
         linIcon={linkedin}
-        socHeight="50px"
+        socHeight="40px"
         socName="Social Media"
         
       />
