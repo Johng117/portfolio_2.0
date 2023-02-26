@@ -1,11 +1,11 @@
-import Navbar from "./Navbar";
 import Menu from "./Menu";
+import Title from "./Title"
 
 const Start = () => {
   return (
     <div className="start-section">
       <div>
-        <Navbar />
+        <Title />
         <Menu />
       </div>
     </div>
