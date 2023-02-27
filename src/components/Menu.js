@@ -25,6 +25,7 @@ const Menu = () => {
         linIcon={linkedin}
         socHeight="40px"
         socName="Social Media"
+        optClass="social"
         
       />
     </div>
