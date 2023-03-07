@@ -1,13 +1,11 @@
-import Menu from "./Menu";
+import MenuMobile from "./MenuMobile";
 import Title from "./Title"
 
 const Start = () => {
   return (
     <div className="start-section">
-      <div>
         <Title />
-        <Menu />
-      </div>
+        <MenuMobile />
     </div>
   );
 };
