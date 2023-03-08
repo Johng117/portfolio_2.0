@@ -5,6 +5,68 @@
   font-family: Quicksand;
 }
 
+.hamburger-btn {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.hamburger-icon-closed {
+  position: relative;
+  height: auto;
+  width: 25px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 14px;
+}
+.hamburger-icon-closed span {
+  position: absolute;
+  background-color: #e4f1fe;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+}
+.hamburger-icon-closed span:nth-child(1) {
+  top: 2px;
+}
+.hamburger-icon-closed span:nth-child(2) {
+  top: 10px;
+}
+.hamburger-icon-closed span:nth-child(3) {
+  top: 18px;
+}
+
+.hamburger-icon-open {
+  position: relative;
+  height: auto;
+  width: 25px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 14px;
+}
+.hamburger-icon-open span {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+}
+.hamburger-icon-open span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+.hamburger-icon-open span:nth-child(2) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+.hamburger-icon-open span:nth-child(3) {
+  height: 0px;
+  width: 0px;
+}
+
 body {
   height: 100%;
 }
@@ -14,87 +76,32 @@ body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 100px 800px;
+  height: 600px;
 }
 
-.title-container {
+.title-menu {
   display: grid;
   width: 100%;
-  grid-template-columns: 100%;
+  grid-template-columns: 70% 30%;
   color: #8dc6ff;
   justify-self: flex-start;
   font-size: 22px;
   padding: 10px 0px 10px 0px;
   line-height: 28px;
 }
-.title-container .name {
+.title-menu .name-container {
   border-left: 2px solid #e4f1fe;
   padding: 12px 0px 0px 5px;
   justify-self: flex-start;
   margin-left: 15px;
 }
-.title-container .name span {
+.title-menu .name-container span {
   color: #e4f1fe;
   margin-left: 1px;
 }
-
-.hamburger .hamburger-btn {
-  height: 50px;
-  width: 50px;
-  background: transparent;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-}
-.hamburger .hamburger-icon-closed {
-  position: relative;
-  height: auto;
-  width: 25px;
-  display: inline-block;
-  cursor: pointer;
-  margin-top: 14px;
-}
-.hamburger .hamburger-icon-closed span {
-  position: absolute;
-  background-color: white;
-  width: 100%;
-  height: 3px;
-  border-radius: 5px;
-}
-.hamburger .hamburger-icon-closed span:nth-child(1) {
-  top: 2px;
-}
-.hamburger .hamburger-icon-closed span:nth-child(2) {
-  top: 10px;
-}
-.hamburger .hamburger-icon-closed span:nth-child(3) {
-  top: 18px;
-}
-.hamburger .hamburger-icon-open {
-  position: relative;
-  height: auto;
-  width: 25px;
-  display: inline-block;
-  cursor: pointer;
-  margin-top: 14px;
-}
-.hamburger .hamburger-icon-open span {
-  position: absolute;
-  background-color: white;
-  width: 100%;
-  height: 3px;
-  border-radius: 5px;
-}
-.hamburger .hamburger-icon-open span:nth-child(1) {
-  top: 10px;
-  transform: rotate(45deg);
-}
-.hamburger .hamburger-icon-open span:nth-child(2) {
-  top: 10px;
-  transform: rotate(-45deg);
-}
-.hamburger .hamburger-icon-open span:nth-child(3) {
-  height: 0px;
-  width: 0px;
+.title-menu .hamburger-container {
+  justify-self: flex-end;
+  padding: 5px 5px 0px 0px;
 }
 
 .menu {
@@ -143,4 +150,6 @@ body {
 .footer {
   height: 100px;
   width: 100%;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
