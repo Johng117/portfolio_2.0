@@ -1,6 +1,6 @@
 import Start from "./components/Start";
 // import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer.js";
 import "materialize-css/dist/css/materialize.min.css";
 
 function App() {
