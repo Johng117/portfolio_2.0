@@ -4,6 +4,6 @@ import Footer from "./Footer";
 
 test("renders the footer text correctly", () => {
   render(<Footer />);
-  const pElement = screen.getByText(/copyright/i);
-  expect(pElement).toBeInTheDocument();
+  const footElement = screen.getByText(/copyright/i);
+  expect(footElement).toBeInTheDocument();
 });

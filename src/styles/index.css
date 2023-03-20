@@ -17,7 +17,7 @@
 .hamburger-icon-closed {
   position: relative;
   height: auto;
-  width: 25px;
+  width: 27px;
   display: inline-block;
   cursor: pointer;
   margin-top: 14px;
@@ -30,13 +30,10 @@
   border-radius: 5px;
 }
 .hamburger-icon-closed span:nth-child(1) {
-  top: 2px;
+  top: 4px;
 }
 .hamburger-icon-closed span:nth-child(2) {
-  top: 10px;
-}
-.hamburger-icon-closed span:nth-child(3) {
-  top: 18px;
+  top: 17px;
 }
 
 .hamburger-icon-open {
@@ -61,10 +58,6 @@
 .hamburger-icon-open span:nth-child(2) {
   top: 10px;
   transform: rotate(-45deg);
-}
-.hamburger-icon-open span:nth-child(3) {
-  height: 0px;
-  width: 0px;
 }
 
 body {
