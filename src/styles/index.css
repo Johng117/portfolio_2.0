@@ -83,14 +83,48 @@ body {
   line-height: 28px;
 }
 .title-menu .name-container {
-  border-left: 2px solid #e4f1fe;
   padding: 12px 0px 0px 5px;
   justify-self: flex-start;
   margin-left: 15px;
+  display: flex;
 }
-.title-menu .name-container span {
-  color: #e4f1fe;
-  margin-left: 1px;
+.title-menu .name-container .name-role-container {
+  display: flex;
+  flex-direction: column;
+}
+.title-menu .name-container .name-role-container .under {
+  font-size: 24px;
+  font-weight: 800;
+  color: #cb3216;
+  position: absolute;
+  animation: under-blink 0.5s;
+  animation-iteration-count: 4;
+  opacity: 0;
+}
+@keyframes under-blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.title-menu .name-container .name-role-container .letter {
+  font-size: 24px;
+  color: #cb3216;
+  position: relative;
+  opacity: 0;
+  animation: move-text 0.1s forwards;
+  height: 50px;
+}
+@keyframes move-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    color: #cb3126;
+  }
 }
 .title-menu .hamburger-container {
   justify-self: flex-end;

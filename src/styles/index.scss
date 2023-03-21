@@ -25,14 +25,58 @@ body {
   line-height: 28px;
 
   .name-container {
-    border-left: 2px solid $light-color;
     padding: 12px 0px 0px 5px;
     justify-self: flex-start;
     margin-left: 15px;
+    display: flex;
 
-    span {
-      color: $light-color;
-      margin-left: 1px;
+    .name-role-container {
+      display: flex;
+      flex-direction: column;
+
+      // .role {
+      //   margin-left: 10px;
+      // }
+
+      .under {
+        font-size: $title-text-size;
+        font-weight: 800;
+        color: $name-role;
+        position: absolute;
+        animation: under-blink 0.5s;
+        animation-iteration-count: 4;
+        opacity: 0;
+      }
+
+      @keyframes under-blink {
+        0% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .letter {
+        font-size: $title-text-size;
+        color: $name-role;
+        position: relative;
+        opacity: 0;
+        animation: move-text 0.1s forwards;
+        height: 50px;
+      }
+
+      @keyframes move-text {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+          color: #cb3126;
+        }
+      }
     }
   }
   .hamburger-container {

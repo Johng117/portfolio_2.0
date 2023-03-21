@@ -1,12 +1,11 @@
 import Hamburger from "./Hamburger";
+import Name from "./Name/Name"
 
 const Nav = () => {
     return (
       <div className="title-menu">
         <div className="name-container">
-          John Gorman<span className="colon">:</span>
-          <br />
-          Junior Developer
+          <Name />
         </div>
         <div className="hamburger-container">
           <Hamburger />
