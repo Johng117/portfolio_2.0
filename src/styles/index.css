@@ -29,11 +29,11 @@
   height: 3px;
   border-radius: 5px;
 }
-.hamburger-icon-closed span:nth-child(1) {
-  top: 4px;
-}
 .hamburger-icon-closed span:nth-child(2) {
-  top: 17px;
+  top: 10px;
+}
+.hamburger-icon-closed span:nth-child(3) {
+  top: 20px;
 }
 
 .hamburger-icon-open {
@@ -59,6 +59,9 @@
   top: 10px;
   transform: rotate(-45deg);
 }
+.hamburger-icon-open span:nth-child(3) {
+  display: none;
+}
 
 body {
   height: 100%;
@@ -79,8 +82,8 @@ body {
   color: #8dc6ff;
   justify-self: flex-start;
   font-size: 22px;
-  padding: 10px 0px 10px 0px;
   line-height: 28px;
+  height: 80px;
 }
 .title-menu .name-container {
   padding: 12px 0px 0px 5px;
@@ -95,7 +98,7 @@ body {
 .title-menu .name-container .name-role-container .under {
   font-size: 24px;
   font-weight: 800;
-  color: #cb3216;
+  color: #e4f1fe;
   position: absolute;
   animation: under-blink 0.5s;
   animation-iteration-count: 4;
@@ -104,14 +107,16 @@ body {
 @keyframes under-blink {
   0% {
     opacity: 1;
+    background-color: #e4f1fe;
   }
   100% {
     opacity: 0;
+    color: #e4f1fe;
   }
 }
 .title-menu .name-container .name-role-container .letter {
   font-size: 24px;
-  color: #cb3216;
+  color: #e4f1fe;
   position: relative;
   opacity: 0;
   animation: move-text 0.1s forwards;
@@ -120,10 +125,14 @@ body {
 @keyframes move-text {
   0% {
     opacity: 0;
+    background-color: #e4f1fe;
+  }
+  50% {
+    background-color: #e4f1fe;
   }
   100% {
     opacity: 1;
-    color: #cb3126;
+    color: #e4f1fe;
   }
 }
 .title-menu .hamburger-container {
@@ -177,6 +186,20 @@ body {
 .footer {
   height: 100px;
   width: 100%;
+}
+
+.menu-mobile-open {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  opacity: 93%;
+  top: 80px;
+  padding: 20px 20px;
+}
+
+.mobile-menu-item {
+  color: #e4f1fe;
 }
 
 /*# sourceMappingURL=index.css.map */

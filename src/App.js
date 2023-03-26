@@ -1,4 +1,4 @@
-import Start from "./components/Start";
+import Start from "./components/Start/Start";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer.js";
 import "materialize-css/dist/css/materialize.min.css";

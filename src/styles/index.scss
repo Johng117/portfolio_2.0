@@ -21,8 +21,8 @@ body {
   color: $text-color;
   justify-self: flex-start;
   font-size: 22px;
-  padding: 10px 0px 10px 0px;
   line-height: 28px;
+  height: 80px;
 
   .name-container {
     padding: 12px 0px 0px 5px;
@@ -51,10 +51,12 @@ body {
       @keyframes under-blink {
         0% {
           opacity: 1;
+          background-color: $name-role;
         }
 
         100% {
           opacity: 0;
+          color: $name-role;
         }
       }
 
@@ -70,11 +72,16 @@ body {
       @keyframes move-text {
         0% {
           opacity: 0;
+          background-color: $name-role;
+        }
+
+        50% {
+          background-color: $name-role;
         }
 
         100% {
           opacity: 1;
-          color: #cb3126;
+          color: $name-role;
         }
       }
     }
@@ -153,3 +160,17 @@ body {
 // @media {
 
 // }
+
+.menu-mobile-open {
+  position:absolute;
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  opacity: 93%;
+  top:80px;
+  padding: 20px 20px;
+}
+
+.mobile-menu-item {
+  color: $name-role
+}

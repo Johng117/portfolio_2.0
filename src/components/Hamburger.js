@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-const Hamburger = () => {
+const Hamburger = ( { openMobileMenu }) => {
   const [menuOpen, setMenuOpen] = useState(true);
 
   // a function to change the state of hamburger icon when clicked.
   function handleMenuClick() {
     setMenuOpen(!menuOpen);
+    openMobileMenu()
   }
 
   return (
@@ -16,6 +17,7 @@ const Hamburger = () => {
         onClick={handleMenuClick}
         href="\#"
       >
+        <span></span>
         <span></span>
         <span></span>
       </a>
