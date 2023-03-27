@@ -24,7 +24,7 @@
 }
 .hamburger-icon-closed span {
   position: absolute;
-  background-color: #e4f1fe;
+  background-color: #22313f;
   width: 100%;
   height: 3px;
   border-radius: 5px;
@@ -46,7 +46,7 @@
 }
 .hamburger-icon-open span {
   position: absolute;
-  background-color: white;
+  background-color: #22313f;
   width: 100%;
   height: 3px;
   border-radius: 5px;
@@ -68,11 +68,11 @@ body {
 }
 
 .start-section {
-  background: #22313f;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 100px 800px;
   height: 600px;
+  border-bottom: 1px solid #22313f;
 }
 
 .title-menu {
@@ -86,7 +86,8 @@ body {
   height: 80px;
 }
 .title-menu .name-container {
-  padding: 12px 0px 0px 5px;
+  background: #22313f;
+  padding: 5px 15px;
   justify-self: flex-start;
   margin-left: 15px;
   display: flex;
@@ -94,6 +95,7 @@ body {
 .title-menu .name-container .name-role-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .title-menu .name-container .name-role-container .under {
   font-size: 24px;
@@ -183,9 +185,10 @@ body {
   padding-left: 10px;
 }
 
-.footer {
-  height: 100px;
+.footer, .projects {
+  height: 600px;
   width: 100%;
+  border-bottom: 1px solid #22313f;
 }
 
 .menu-mobile-open {
@@ -200,6 +203,22 @@ body {
 
 .mobile-menu-item {
   color: #e4f1fe;
+}
+
+@media only screen and (min-width: 770px) {
+  .title-menu {
+    grid-template-columns: 420px repeat(4, 1fr);
+  }
+  .title-menu .name-container .name-role-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .title-menu .name-container .name-role-container .role {
+    padding-left: 10px;
+  }
+  .title-menu .hamburger-container {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

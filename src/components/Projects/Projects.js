@@ -1,6 +1,8 @@
+// import { useRef } from "react";
+
 const Projects = () => {
     return ( 
-        <div className="projects-section">
+        <div className="projects">
             <h1>Projects</h1>
         </div>
      );

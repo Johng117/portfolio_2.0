@@ -7,11 +7,11 @@ body {
 }
 
 .start-section {
-  background: $primary-color;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 100px 800px;
   height: 600px;
+  border-bottom: 1px solid $primary-color;
 }
 
 .title-menu {
@@ -25,7 +25,8 @@ body {
   height: 80px;
 
   .name-container {
-    padding: 12px 0px 0px 5px;
+    background: $primary-color;
+    padding: 5px 15px;
     justify-self: flex-start;
     margin-left: 15px;
     display: flex;
@@ -33,10 +34,7 @@ body {
     .name-role-container {
       display: flex;
       flex-direction: column;
-
-      // .role {
-      //   margin-left: 10px;
-      // }
+      justify-content: center;
 
       .under {
         font-size: $title-text-size;
@@ -128,9 +126,6 @@ body {
   margin: 0px 0px 16px 0px;
   justify-self: center;
 }
-// .social {
-//   justify-content: space-between;
-// }
 
 .option:hover,
 .social:hover {
@@ -152,25 +147,45 @@ body {
 //   cursor: pointer;
 // }
 
-.footer {
-  height: 100px;
+
+
+
+.footer, .projects {
+  height: 600px;
   width: 100%;
+  border-bottom: 1px solid $primary-color;
 }
 
-// @media {
-
-// }
-
 .menu-mobile-open {
-  position:absolute;
+  position: absolute;
   width: 100%;
   height: 200px;
   background-color: black;
   opacity: 93%;
-  top:80px;
+  top: 80px;
   padding: 20px 20px;
 }
 
 .mobile-menu-item {
-  color: $name-role
+  color: $name-role;
+}
+
+@media only screen and (min-width: 770px) {
+  .title-menu {
+    grid-template-columns: 420px repeat(4, 1fr);
+    .name-container {
+      .name-role-container {
+        flex-direction: row;
+        align-items: center;
+
+        .role {
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .hamburger-container {
+      display: none;
+    }
+  }
 }

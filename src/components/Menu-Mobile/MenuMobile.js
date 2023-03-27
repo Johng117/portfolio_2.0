@@ -1,14 +1,27 @@
-import MenuItem from "./MenuItem"
+import MenuItem from "./MenuItem";
 
-const MenuMobile = () => {
-    return (
-      <div className="menu-mobile-open">
-        <MenuItem item="This" />
-        <MenuItem item="is" />
-        <MenuItem item="a" />
-        <MenuItem item="Menu Item" />
-      </div>
-    );
-}
- 
+const MenuMobile = ({ openMobileMenu, sectionName }) => {
+  const menuArray = ["Start", "Projects", "Footer"];
+
+  const handleSectionName = (e) => {
+    openMobileMenu();
+    sectionName(e);
+  };
+
+  return (
+    <div className="menu-mobile-open">
+      {menuArray.map((_, index) => {
+        return (
+          <MenuItem
+            key={index}
+            item={menuArray[index]}
+            handleSectionName={handleSectionName}
+            className={menuArray[index]}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
 export default MenuMobile;

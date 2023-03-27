@@ -1,20 +1,16 @@
-import { useState } from "react";
-
-const Hamburger = ( { openMobileMenu }) => {
-  const [menuOpen, setMenuOpen] = useState(true);
-
+const Hamburger = ({ openMobileMenu, isHamOpen }) => {
+  
   // a function to change the state of hamburger icon when clicked.
-  function handleMenuClick() {
-    setMenuOpen(!menuOpen);
-    openMobileMenu()
+  function handleHamClick() {
+    openMobileMenu();
   }
 
   return (
     <div className="hamburger-btn">
       <a
         role="button"
-        className={menuOpen ? "hamburger-icon-closed" : "hamburger-icon-open"}
-        onClick={handleMenuClick}
+        className={isHamOpen ? "hamburger-icon-open" : "hamburger-icon-closed"}
+        onClick={handleHamClick}
         href="\#"
       >
         <span></span>
