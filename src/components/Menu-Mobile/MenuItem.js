@@ -1,8 +1,8 @@
 
-const MenuItem = ( { item, handleSectionName, className }) => {
+const MenuItem = ( { item, className, handleMenuClick }) => {
     return ( 
         <div className="mobile-menu-item">
-            <h5 className={className} onClick={handleSectionName}>{ item }</h5>
+            <h5 className={className} onClick={handleMenuClick}>{ item }</h5>
         </div>
      );
 }

@@ -1,26 +1,22 @@
 import MenuItem from "./MenuItem";
 
-const MenuMobile = ({ openMobileMenu, sectionName }) => {
-  const menuArray = ["Start", "Projects", "Footer"];
-
-  const handleSectionName = (e) => {
-    openMobileMenu();
-    sectionName(e);
-  };
+const MenuMobile = ( { menuArray, handleMenuClick }) => {
+  
+  console.log("MenuMobile")
 
   return (
-    <div className="menu-mobile-open">
+    <section className="menu-mobile-open">
       {menuArray.map((_, index) => {
         return (
           <MenuItem
             key={index}
             item={menuArray[index]}
-            handleSectionName={handleSectionName}
             className={menuArray[index]}
+            handleMenuClick={handleMenuClick}
           />
         );
       })}
-    </div>
+    </section>
   );
 };
 

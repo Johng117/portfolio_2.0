@@ -2,9 +2,9 @@
 
 const Projects = () => {
     return ( 
-        <div className="projects">
-            <h1>Projects</h1>
-        </div>
+        <section className="projects-section">
+            <h3>Projects</h3>
+        </section>
      );
 }
  
