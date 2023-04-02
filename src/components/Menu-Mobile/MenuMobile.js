@@ -1,6 +1,6 @@
-import MenuItem from "./MenuItem";
+import MobMenuItem from "./MobMenuItem";
 
-const MenuMobile = ( { menuArray, handleMenuClick }) => {
+const MenuMobile = ( { menuArray, handleMobMenuClick }) => {
   
   console.log("MenuMobile")
 
@@ -8,11 +8,11 @@ const MenuMobile = ( { menuArray, handleMenuClick }) => {
     <section className="menu-mobile-open">
       {menuArray.map((_, index) => {
         return (
-          <MenuItem
+          <MobMenuItem
             key={index}
             item={menuArray[index]}
             className={menuArray[index]}
-            handleMenuClick={handleMenuClick}
+            handleMobMenuClick={handleMobMenuClick}
           />
         );
       })}
