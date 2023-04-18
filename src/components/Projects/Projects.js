@@ -7,6 +7,7 @@ const Projects = () => {
         <section className="projects-section">
             <h3>Projects</h3>
             <MobProjectCard />
+            <MobProjectCard />
         </section>
      );
 }

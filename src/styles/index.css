@@ -139,19 +139,54 @@ body {
   width: 75%;
 }
 
-.main-section {
-  height: 400px;
+.main-section, .projects-section, .footer-section {
   margin-top: 100px;
 }
-.main-section h3 {
+.main-section h3, .projects-section h3, .footer-section h3 {
   margin: 0;
 }
 
 .projects-section {
-  height: 400px;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+  justify-items: center;
 }
 .projects-section h3 {
-  margin: 0;
+  padding-top: 20px;
+}
+.projects-section .mobile-card {
+  border: 1px solid red;
+  position: relative;
+  width: 340px;
+  height: 400px;
+  display: grid;
+  grid-template-rows: 150px 100px 50px;
+  gap: 10px;
+  padding: 30px 3px 3px 3px;
+  margin-bottom: 20px;
+}
+.projects-section .mobile-card .project-pic, .projects-section .mobile-card .project-brief, .projects-section .mobile-card .project-link {
+  border: 1px solid red;
+}
+.projects-section .mobile-card .project-brief {
+  display: flex;
+}
+.projects-section .mobile-card .project-brief .info-button {
+  background: white;
+  border: none;
+  cursor: pointer;
+  margin: auto 0 0 auto;
+}
+.projects-section .mobile-card .project-brief .info-logo {
+  height: 25px;
+}
+.projects-section .mobile-card .cover-info {
+  width: 100%;
+  position: absolute;
+  border: 1px solid blue;
+  height: 400px;
+  display: none;
+  background-color: white;
 }
 
 @media only screen and (min-width: 770px) {
@@ -181,7 +216,7 @@ body {
   .header-section .hamburger-container {
     display: none;
   }
-  .main-section {
+  .main-section, .projects-section, .footer-section {
     margin-top: 120px;
   }
 }
