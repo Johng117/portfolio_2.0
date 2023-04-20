@@ -1,19 +1,21 @@
 
-import info from "../../assets/info.png";
+import { useState } from "react";
+import ProjectSummary from "./ProjectSummary";
+import ProjectDetail from "./ProjectDetail";
 
 const MobProjectCard = () => {
+  const [switchCard, setSwitchCard] = useState({ status: "summary" }) 
+
+  const handleCardStatus=(e)=> {
+    console.log(e.target.id)
+    setSwitchCard({ status: e.target.id })
+  }
     return (
-      <section class="mobile-card">
-        <div class="project-pic"></div>
-        <div class="project-brief">
-          <button class="info-button">
-            <img src={info} class="info-logo"></img>
-          </button>
-        </div>
-        <div class="project-link"></div>
-        <div class="cover-info"></div>
+      <section className="mobile-card">
+        {switchCard.status==="summary" && <ProjectSummary handleCardStatus={handleCardStatus}/>}
+        {switchCard.status==="detail" && <ProjectDetail handleCardStatus={handleCardStatus}/>}
       </section>
     );
 }
- 
+
 export default MobProjectCard;
