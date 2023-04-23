@@ -1,8 +1,8 @@
 const Main = () => {
   return (
-    <div className="main-section">
+    <section className="main-section">
       <h3>Main</h3>
-    </div>
+    </section>
   );
 };
 

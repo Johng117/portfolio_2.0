@@ -7,7 +7,7 @@ import MenuFull from "../Menu-Full/MenuFull";
 const Header = ({ handleMenuValue }) => {
   const [openMobMenu, setOpenMobMenu] = useState(false);
   const [isHamOpen, setIsHamOpen] = useState(false);
-  const menuArray = ["main", "projects", "footer"];
+  const menuArray = ["main", "projects", "about"];
 
   const openMenu = () => {
     setOpenMobMenu(!openMobMenu);
@@ -23,8 +23,6 @@ const Header = ({ handleMenuValue }) => {
   const handlePageMenuClick = (e) => {
     handleMenuValue(e.target.className);
   };
-
-  console.log("header");
 
   return (
     <section className="header-section">

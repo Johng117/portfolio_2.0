@@ -1,9 +1,11 @@
-@import "./resets";
+
 @import "./variables";
 @import "./hamburger";
 
-body {
+body, html {
   height: 100%;
+  font-family: "quicksand";
+  margin: 0;
 }
 
 .header-section {
@@ -90,9 +92,9 @@ body {
 }
 
 .main-section,
-.projects-section,
-.footer-section {
+.about-section {
   margin-top: 100px;
+  height: 850px;
   h3 {
     margin: 0;
   }
@@ -150,6 +152,15 @@ body {
   }
 }
 
+.about-section {
+  .input-name {
+    width: 100px;
+  }
+}
+
+
+
+
 @media only screen and (min-width: 770px) {
   .header-section {
     grid-template-columns: 1fr;
@@ -191,13 +202,14 @@ body {
 
   .main-section,
   .projects-section,
+  .about-section,
   .footer-section {
     margin-top: 120px;
   }
 
-  .mob-cards-container {
-    display: none;
-  }
+  // .mob-cards-container {
+  //   display: none;
+  // }
 }
 
 @media only screen and (max-width: 770px) {
