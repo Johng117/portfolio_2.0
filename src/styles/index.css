@@ -17,7 +17,7 @@
 }
 .hamburger-icon-closed span {
   position: absolute;
-  background-color: #22313f;
+  background-color: #212A3E;
   width: 100%;
   height: 3px;
   border-radius: 5px;
@@ -39,7 +39,7 @@
 }
 .hamburger-icon-open span {
   position: absolute;
-  background-color: #22313f;
+  background-color: #212A3E;
   width: 100%;
   height: 3px;
   border-radius: 5px;
@@ -56,17 +56,19 @@
   display: none;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   font-family: "quicksand";
   margin: 0;
+  background-color: #F1F6F9;
 }
 
 .header-section {
   height: auto;
   width: 100%;
-  border-bottom: 1px solid #22313f;
-  background-color: #ffffff;
+  border-bottom: 1px solid #212A3E;
+  background-color: #F1F6F9;
   display: grid;
   grid-template-columns: 70% 30%;
   top: 0px;
@@ -78,9 +80,9 @@ body, html {
   padding: 10px;
 }
 .header-section .name-role-container .under {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
-  color: #22313f;
+  color: #212A3E;
   top: 10px;
   animation: under-blink 0.5s;
   animation-iteration-count: 4;
@@ -89,16 +91,17 @@ body, html {
 @keyframes under-blink {
   0% {
     opacity: 1;
-    background-color: #22313f;
+    background-color: #212A3E;
   }
   100% {
     opacity: 0;
-    color: #22313f;
+    color: #212A3E;
   }
 }
 .header-section .name-role-container .letter {
-  font-size: 24px;
-  color: #22313f;
+  font-size: 26px;
+  font-weight: 700;
+  color: #212A3E;
   position: relative;
   opacity: 0;
   animation: move-text 0.1s forwards;
@@ -107,14 +110,14 @@ body, html {
 @keyframes move-text {
   0% {
     opacity: 0;
-    background-color: #22313f;
+    background-color: #212A3E;
   }
   50% {
-    background-color: #22313f;
+    background-color: #212A3E;
   }
   100% {
     opacity: 1;
-    color: #22313f;
+    color: #212A3E;
   }
 }
 .header-section .hamburger-container {
@@ -124,6 +127,28 @@ body, html {
 }
 .header-section .menu-mobile-open {
   padding: 10px;
+}
+.header-section .page-menu-container .page-menu-item {
+  display: flex;
+  justify-content: center;
+}
+.header-section .page-menu-container .page-menu-item .main,
+.header-section .page-menu-container .page-menu-item .projects,
+.header-section .page-menu-container .page-menu-item .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2px;
+  width: 150px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+}
+.header-section .page-menu-container .page-menu-item .main:hover,
+.header-section .page-menu-container .page-menu-item .projects:hover,
+.header-section .page-menu-container .page-menu-item .about:hover {
+  background-color: rgba(57, 72, 103, 0.1);
+  cursor: pointer;
 }
 
 .main-section,
@@ -180,8 +205,27 @@ body, html {
   border: 1px solid blue;
 }
 
-.about-section .input-name {
-  width: 100px;
+.about-section {
+  display: grid;
+  grid-template-rows: 200px 1fr;
+}
+.about-section .about-form {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: repeat(2, 30px);
+  gap: 10px;
+}
+.about-section .about-form .input-name,
+.about-section .about-form .input-email {
+  margin-left: 10px;
+}
+.about-section .about-form .message-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30px 400px;
+}
+.about-section .about-form .message-container .message {
+  margin-top: 5px;
 }
 
 @media only screen and (min-width: 770px) {
@@ -210,9 +254,15 @@ body, html {
   }
   .header-section .page-menu-container :first-child {
     justify-self: end;
+    display: flex;
+    justify-content: flex-end;
   }
   .header-section .page-menu-container :nth-child(2) {
     justify-self: center;
+  }
+  .header-section .page-menu-container :nth-child(3) {
+    display: flex;
+    justify-content: flex-start;
   }
   .header-section .hamburger-container,
   .header-section .menu-mobile-open {
