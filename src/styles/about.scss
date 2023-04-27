@@ -1,0 +1,32 @@
+.about-section {
+  padding: 75px;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  gap: 5px;
+
+  .about-heading-container {
+    border: 1px dashed blue;
+  }
+
+  .about-form {
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: repeat(2, 30px);
+    gap: 10px;
+
+    .input-name,
+    .input-email,
+    .message {
+      margin-left: 10px;
+    }
+
+    .message-container {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 30px 400px;
+      .message {
+        margin-top: 5px;
+      }
+    }
+  }
+}

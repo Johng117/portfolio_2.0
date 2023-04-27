@@ -1,5 +1,8 @@
 @import "./variables";
 @import "./hamburger";
+@import "./header.scss";
+@import "./about.scss";
+
 
 body,
 html {
@@ -9,103 +12,7 @@ html {
   background-color: $light-color;
 }
 
-.header-section {
-  height: auto;
-  width: 100%;
-  border-bottom: 1px solid $primary-color;
-  background-color: $light-color;
-  display: grid;
-  grid-template-columns: 70% 30%;
-  top: 0px;
-  position: absolute;
 
-  .name-role-container {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-
-    .under {
-      font-size: $title-text-size;
-      font-weight: 800;
-      color: $primary-color;
-      top: 10px;
-      animation: under-blink 0.5s;
-      animation-iteration-count: 4;
-      opacity: 0;
-    }
-
-    @keyframes under-blink {
-      0% {
-        opacity: 1;
-        background-color: $primary-color;
-      }
-
-      100% {
-        opacity: 0;
-        color: $primary-color;
-      }
-    }
-
-    .letter {
-      font-size: $title-text-size;
-      font-weight: 700;
-      color: $primary-color;
-      position: relative;
-      opacity: 0;
-      animation: move-text 0.1s forwards;
-      height: 50px;
-    }
-
-    @keyframes move-text {
-      0% {
-        opacity: 0;
-        background-color: $primary-color;
-      }
-
-      50% {
-        background-color: $primary-color;
-      }
-
-      100% {
-        opacity: 1;
-        color: $primary-color;
-      }
-    }
-  }
-  .hamburger-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
-  }
-
-  .menu-mobile-open {
-    padding: 10px;
-  }
-
-  .page-menu-container {
-    .page-menu-item {
-      display: flex;
-      justify-content: center;
-
-      .main,
-      .projects,
-      .about {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 2px;
-        width: 150px;
-        border-radius: 10px;
-        text-align: center;
-        margin: 10px;
-        &:hover {
-          background-color: rgb(57, 72, 103, 0.1);
-          cursor: pointer;
-        }
-      }
-    }
-  }
-}
 
 .main-section,
 .about-section {
@@ -168,30 +75,7 @@ html {
   }
 }
 
-.about-section {
-  display: grid;
-  grid-template-rows: 200px 1fr;
-  .about-form {
-    display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: repeat(2, 30px);
-    gap: 10px;
 
-    .input-name,
-    .input-email {
-      margin-left: 10px;
-    }
-
-    .message-container {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: 30px 400px;
-      .message {
-        margin-top: 5px;
-      }
-    }
-  }
-}
 
 @media only screen and (min-width: 770px) {
   .header-section {

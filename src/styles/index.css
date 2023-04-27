@@ -56,14 +56,6 @@
   display: none;
 }
 
-body,
-html {
-  height: 100%;
-  font-family: "quicksand";
-  margin: 0;
-  background-color: #F1F6F9;
-}
-
 .header-section {
   height: auto;
   width: 100%;
@@ -127,6 +119,10 @@ html {
 }
 .header-section .menu-mobile-open {
   padding: 10px;
+  font-size: 20px;
+}
+.header-section .menu-mobile-open h5:hover {
+  cursor: pointer;
 }
 .header-section .page-menu-container .page-menu-item {
   display: flex;
@@ -149,6 +145,43 @@ html {
 .header-section .page-menu-container .page-menu-item .about:hover {
   background-color: rgba(57, 72, 103, 0.1);
   cursor: pointer;
+}
+
+.about-section {
+  padding: 75px;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  gap: 5px;
+}
+.about-section .about-heading-container {
+  border: 1px dashed blue;
+}
+.about-section .about-form {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: repeat(2, 30px);
+  gap: 10px;
+}
+.about-section .about-form .input-name,
+.about-section .about-form .input-email,
+.about-section .about-form .message {
+  margin-left: 10px;
+}
+.about-section .about-form .message-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30px 400px;
+}
+.about-section .about-form .message-container .message {
+  margin-top: 5px;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "quicksand";
+  margin: 0;
+  background-color: #F1F6F9;
 }
 
 .main-section,
@@ -203,29 +236,6 @@ html {
   height: 100%;
   width: 100%;
   border: 1px solid blue;
-}
-
-.about-section {
-  display: grid;
-  grid-template-rows: 200px 1fr;
-}
-.about-section .about-form {
-  display: grid;
-  grid-template-columns: 500px;
-  grid-template-rows: repeat(2, 30px);
-  gap: 10px;
-}
-.about-section .about-form .input-name,
-.about-section .about-form .input-email {
-  margin-left: 10px;
-}
-.about-section .about-form .message-container {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 30px 400px;
-}
-.about-section .about-form .message-container .message {
-  margin-top: 5px;
 }
 
 @media only screen and (min-width: 770px) {
