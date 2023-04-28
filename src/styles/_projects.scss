@@ -1,0 +1,51 @@
+.projects-section {
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+  justify-items: center;
+
+  h3 {
+    padding-top: 20px;
+  }
+
+  .mobile-card {
+    // border: 1px solid red;
+    width: 340px;
+    height: 400px;
+    padding: 30px 3px 3px 3px;
+    margin-bottom: 20px;
+
+    .summary {
+      display: grid;
+      grid-template-rows: 150px 100px 50px;
+      gap: 10px;
+      height: 100%;
+      width: 100%;
+
+      .project-pic,
+      .project-brief,
+      .project-link {
+        border: 1px solid red;
+      }
+
+      .project-brief {
+        display: flex;
+        .info-button {
+          background: white;
+          border: none;
+          cursor: pointer;
+          margin: auto 0 0 auto;
+        }
+
+        .info-logo {
+          height: 25px;
+        }
+      }
+    }
+
+    .detail {
+      height: 100%;
+      width: 100%;
+      border: 1px solid blue;
+    }
+  }
+}

@@ -1,8 +1,7 @@
 .header-section {
   height: auto;
   width: 100%;
-  border-bottom: 1px solid $primary-color;
-  background-color: $light-color;
+  background-color: $primary-color;
   display: grid;
   grid-template-columns: 70% 30%;
   top: 0px;
@@ -16,7 +15,7 @@
     .under {
       font-size: $title-text-size;
       font-weight: 800;
-      color: $primary-color;
+      color: $light-color;
       top: 10px;
       animation: under-blink 0.5s;
       animation-iteration-count: 4;
@@ -26,38 +25,45 @@
     @keyframes under-blink {
       0% {
         opacity: 1;
-        background-color: $primary-color;
+        background-color: $light-color;
       }
 
       100% {
         opacity: 0;
-        color: $primary-color;
+        color: $light-color;
       }
     }
 
-    .letter {
+    .letter,
+    .letter-role {
       font-size: $title-text-size;
       font-weight: 700;
-      color: $primary-color;
+      color: $light-color;
       position: relative;
       opacity: 0;
       animation: move-text 0.1s forwards;
-      height: 50px;
+      font-family: "Bungee";
+      display: inline-block;
+      line-height: 30px;
+    }
+
+    .letter-role {
+      font-family: "Bungee Hairline";
     }
 
     @keyframes move-text {
       0% {
         opacity: 0;
-        background-color: $primary-color;
+        background-color: $light-color;
       }
 
       50% {
-        background-color: $primary-color;
+        background-color: $light-color;
       }
 
       100% {
         opacity: 1;
-        color: $primary-color;
+        color: $light-color;
       }
     }
   }
@@ -70,6 +76,13 @@
   .menu-mobile-open {
     padding: 10px;
     font-size: 20px;
+    color: $light-color;
+    border-top: 1px solid $light-color;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: space-around;
+    
   }
 
   .menu-mobile-open h5:hover {

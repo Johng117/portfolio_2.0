@@ -1,13 +1,28 @@
 const Name = () => {
   const under = "_";
-  const nameRole = { name: "John Gorman: ", role: "Junior Developer" };
+  const nameRole = {
+    firstName: "John ",
+    secondName: "Gorman: ",
+    roleFirst: "Junior",
+    roleSecond: "Developer",
+  };
 
   return (
     <div className="name-role-container">
       <span className="under">{under}</span>
       <div className="name">
-        {nameRole.name.split("").map((letter, index) => {
+        {nameRole.firstName.split("").map((letter, index) => {
           let style = { "animationDelay": 2.0 + index / 20 + "s" };
+          return (
+            <span style={style} key={index} className="letter">
+              {letter}
+            </span>
+          );
+        })}
+      </div>
+      <div className="name">
+        {nameRole.secondName.split("").map((letter, index) => {
+          let style = { "animationDelay": 2.2 + index / 20 + "s" };
           return (
             <span style={style} key={index} className="letter">
               {letter}
@@ -16,10 +31,20 @@ const Name = () => {
         })}
       </div>
       <div className="role">
-        {nameRole.role.split("").map((letter, index) => {
+        {nameRole.roleFirst.split("").map((letter, index) => {
           let style = { "animationDelay": 2.5 + index / 20 + "s" };
           return (
-            <span style={style} key={index} className="letter">
+            <span style={style} key={index} className="letter-role">
+              {letter}
+            </span>
+          );
+        })}
+      </div>
+      <div className="role">
+        {nameRole.roleSecond.split("").map((letter, index) => {
+          let style = { "animationDelay": 2.7 + index / 20 + "s" };
+          return (
+            <span style={style} key={index} className="letter-role">
               {letter}
             </span>
           );
@@ -28,41 +53,5 @@ const Name = () => {
     </div>
   );
 };
-{
-  /* {nameRole.name.split("").map((letter, index) => {
-          let style = { "animationDelay": 2.0 + index / 20 + "s" };
-          return letter === " " ? (
-            <span className="space"> </span>
-          ) : (
-            <span
-              className="letter"
-              style={style}
-              key={index}
-              aria-hidden="true"
-            >
-              {letter}
-            </span>
-          );
-        })} */
-}
-{
-  /* <div className="role">
-        {nameRole.role.split("").map((letter, index) => {
-          let style = { "animationDelay": 2.5 + index / 20 + "s" };
-          return letter === " " ? (
-            <span className="space"> </span>
-          ) : (
-            <span
-              className="letter"
-              style={style}
-              key={index}
-              aria-hidden="true"
-            >
-              {letter}
-            </span>
-          );
-        })}
-      </div> */
-}
 
 export default Name;
