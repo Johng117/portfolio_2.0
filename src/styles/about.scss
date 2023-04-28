@@ -1,31 +1,54 @@
 .about-section {
   padding: 75px;
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 50px 500px;
   gap: 5px;
 
   .about-heading-container {
     border: 1px dashed blue;
   }
 
-  .about-form {
+  .text-form-container {
     display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: repeat(2, 30px);
-    gap: 10px;
+    grid-template-columns: 50% 50%;
+    gap: 5px;
+  }
 
-    .input-name,
-    .input-email,
-    .message {
-      margin-left: 10px;
+  .form-container {
+    padding: 15px 15px 15px 30px;
+
+    .about-form {
+      display: grid;
+      grid-template-rows: 30px 30px 220px;
+      gap: 5px;
+      padding-top: 20px;
+      font-weight: 700;
+      color: $secondary-color;
+      font-size: 18px;
     }
 
-    .message-container {
+    .input-name,
+    .input-email {
+      margin-left: 10px;
+      border: 1px solid $secondary-color;
+      font-size: 16px;
+      font-family: "quicksand";
+      background-color: $light-color;
+    }
+
+    .message-label {
       display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: 30px 400px;
-      .message {
-        margin-top: 5px;
+      gap: 5px;
+
+      textarea {
+        height: 150px;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid $secondary-color;
+        font-size: 16px;
+        font-family: "quicksand";
+        background-color: $light-color;
+        font-weight: 00;
       }
     }
   }

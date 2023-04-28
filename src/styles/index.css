@@ -150,30 +150,60 @@
 .about-section {
   padding: 75px;
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 50px 500px;
   gap: 5px;
 }
 .about-section .about-heading-container {
   border: 1px dashed blue;
 }
-.about-section .about-form {
+.about-section .text-form-container {
   display: grid;
-  grid-template-columns: 500px;
-  grid-template-rows: repeat(2, 30px);
-  gap: 10px;
+  grid-template-columns: 50% 50%;
+  gap: 5px;
 }
-.about-section .about-form .input-name,
-.about-section .about-form .input-email,
-.about-section .about-form .message {
+.about-section .form-container {
+  padding: 15px 15px 15px 30px;
+}
+.about-section .form-container .about-form {
+  display: grid;
+  grid-template-rows: 30px 30px 220px;
+  gap: 5px;
+  padding-top: 20px;
+  font-weight: 700;
+  color: #394867;
+  font-size: 18px;
+}
+.about-section .form-container .input-name,
+.about-section .form-container .input-email {
   margin-left: 10px;
+  border: 1px solid #394867;
+  font-size: 16px;
+  font-family: "quicksand";
+  background-color: #F1F6F9;
 }
-.about-section .about-form .message-container {
+.about-section .form-container .message-label {
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 30px 400px;
+  gap: 5px;
 }
-.about-section .about-form .message-container .message {
-  margin-top: 5px;
+.about-section .form-container .message-label textarea {
+  height: 150px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #394867;
+  font-size: 16px;
+  font-family: "quicksand";
+  background-color: #F1F6F9;
+  font-weight: 0;
+}
+
+button {
+  width: 100px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: #394867;
+  color: #F1F6F9;
+  font-family: "quicksand";
+  font-size: 1rem;
 }
 
 body,
