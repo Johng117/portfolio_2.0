@@ -94,7 +94,7 @@
       display: flex;
       justify-content: center;
 
-      .main,
+      .home,
       .projects,
       .about {
         display: flex;
@@ -105,8 +105,9 @@
         border-radius: 10px;
         text-align: center;
         margin: 10px;
+        color: $light-color;
         &:hover {
-          background-color: rgb(57, 72, 103, 0.1);
+          background-color: rgb(57, 72, 103, 0.8);
           cursor: pointer;
         }
       }

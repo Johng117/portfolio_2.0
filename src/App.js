@@ -3,10 +3,10 @@ import Projects from "./components/Projects/Projects";
 import About from "./components/About/About"
 import Footer from "./components/Footer/Footer.js";
 import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
+import Home from "./components/Home/Home";
 
 function App() {
-  const [sectionName, setSectionName] = useState({section: "main"});
+  const [sectionName, setSectionName] = useState({section: "home"});
 
   console.log("App");
 
@@ -18,7 +18,7 @@ function App() {
   return (
     <section className="App">
       <Header handleMenuValue={handleMenuValue} />
-      { sectionName.section==="main" && <Main />}
+      { sectionName.section==="home" && <Home />}
       { sectionName.section==="projects" && <Projects />}
       { sectionName.section==="about" && <About />} 
       <Footer />

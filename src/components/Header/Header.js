@@ -7,7 +7,7 @@ import MenuFull from "../Menu-Full/MenuFull";
 const Header = ({ handleMenuValue }) => {
   const [openMobMenu, setOpenMobMenu] = useState(false);
   const [isHamOpen, setIsHamOpen] = useState(false);
-  const menuArray = ["main", "projects", "about"];
+  const menuArray = ["home", "projects", "about"];
 
   const openMenu = () => {
     setOpenMobMenu(!openMobMenu);

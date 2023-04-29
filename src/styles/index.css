@@ -139,7 +139,7 @@
   display: flex;
   justify-content: center;
 }
-.header-section .page-menu-container .page-menu-item .main,
+.header-section .page-menu-container .page-menu-item .home,
 .header-section .page-menu-container .page-menu-item .projects,
 .header-section .page-menu-container .page-menu-item .about {
   display: flex;
@@ -150,11 +150,12 @@
   border-radius: 10px;
   text-align: center;
   margin: 10px;
+  color: #F1F6F9;
 }
-.header-section .page-menu-container .page-menu-item .main:hover,
+.header-section .page-menu-container .page-menu-item .home:hover,
 .header-section .page-menu-container .page-menu-item .projects:hover,
 .header-section .page-menu-container .page-menu-item .about:hover {
-  background-color: rgba(57, 72, 103, 0.1);
+  background-color: rgba(57, 72, 103, 0.8);
   cursor: pointer;
 }
 
@@ -220,6 +221,7 @@ button {
 .projects-section {
   display: grid;
   grid-template-rows: 100px 1fr 100px;
+  height: 850px;
   justify-items: center;
 }
 .projects-section h3 {
@@ -260,6 +262,30 @@ button {
   width: 100%;
   border: 1px solid blue;
 }
+.projects-section .desktop-card-container {
+  border: 1px solid red;
+  width: 900px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 5px 10px 5px 5px;
+  gap: 5px;
+}
+.projects-section .desktop-card-container .small-cards-container,
+.projects-section .desktop-card-container .big-card-container {
+  border: 1px solid green;
+  min-height: 500px;
+}
+.projects-section .desktop-card-container .small-cards-container {
+  display: grid;
+  padding: 5px;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.projects-section .desktop-card-container .small-cards-container .item_1, .projects-section .desktop-card-container .small-cards-container .item_2, .projects-section .desktop-card-container .small-cards-container .item_3, .projects-section .desktop-card-container .small-cards-container .item_4 {
+  border: 1px solid blue;
+  background: green;
+}
 
 body,
 html {
@@ -269,12 +295,12 @@ html {
   background-color: #F1F6F9;
 }
 
-.main-section,
+.home-section,
 .about-section {
-  margin-top: 100px;
+  margin-top: 150px;
   height: 850px;
 }
-.main-section h3,
+.home-section h3,
 .about-section h3 {
   margin: 0;
 }
@@ -319,11 +345,14 @@ html {
   .header-section .menu-mobile-open {
     display: none;
   }
-  .main-section,
+  .home-section,
   .projects-section,
   .about-section,
   .footer-section {
     margin-top: 120px;
+  }
+  .projects-section .mob-cards {
+    display: none;
   }
 }
 @media only screen and (max-width: 770px) {
