@@ -1,7 +1,6 @@
 .projects-section {
   display: grid;
   grid-template-rows: 100px 1fr 100px;
-  height: 850px;
   justify-items: center;
 
   h3 {
@@ -71,9 +70,34 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
 
-      .item_1, .item_2, .item_3, .item_4 {
-        border: 1px solid blue;
+      .item_1 {
         background: green;
+      }
+      .item_2 {
+        background: red;
+      }
+      .item_3 {
+        background: blue;
+      }
+      .item_4 {
+        background: black;
+      }
+
+      .item_1_shadow {
+        background: green;
+        opacity: 0.2;
+      }
+      .item_2_shadow {
+        background: red;
+        opacity: 0.2;
+      }
+      .item_3_shadow {
+        background: blue;
+        opacity: 0.2;
+      }
+      .item_4_shadow {
+        background: black;
+        opacity: 0.2;
       }
     }
   }

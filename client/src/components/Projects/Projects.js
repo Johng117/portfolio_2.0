@@ -10,7 +10,7 @@ const Projects = () => {
       <div className="mob-cards">
         <MobCards />
       </div>
-      <div>
+      <div className="desktop-cards">
         <DesktopCards />
       </div>
     </section>

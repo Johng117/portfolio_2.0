@@ -5,26 +5,26 @@
 @import "./_buttons.scss";
 @import "./_projects.scss";
 
-
-body,
-html {
+body {
   height: 100%;
   font-family: "quicksand";
   margin: 0;
-  background-color: $light-color;
+  background: radial-gradient(at 70%,rgb(33, 42, 62,0.5), rgb(33, 42, 62,1));
 }
 
-
-
 .home-section,
-.about-section {
-  margin-top: 150px;
-  height: 850px;
+.about-section,
+.projects-section {
+  margin-top: 120px;
+  height: 650px;
   h3 {
     margin: 0;
   }
 }
 
+.home-section {
+  color: $light-color;
+}
 
 @media only screen and (min-width: 770px) {
   .header-section {
@@ -37,7 +37,8 @@ html {
       justify-self: center;
       justify-content: center;
 
-      .role, .name {
+      .role,
+      .name {
         padding-left: 10px;
       }
     }
@@ -75,7 +76,7 @@ html {
   .projects-section,
   .about-section,
   .footer-section {
-    margin-top: 120px;
+    margin-top: 100px;
   }
 
   .projects-section {
@@ -95,6 +96,12 @@ html {
     }
 
     .page-menu-container {
+      display: none;
+    }
+  }
+  .projects-section {
+    height: auto;
+    .desktop-cards {
       display: none;
     }
   }

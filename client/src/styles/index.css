@@ -59,7 +59,7 @@
 .header-section {
   height: auto;
   width: 100%;
-  background-color: #212A3E;
+  color: #F1F6F9;
   display: grid;
   grid-template-columns: 70% 30%;
   top: 0px;
@@ -122,19 +122,6 @@
   justify-content: center;
   padding-top: 15px;
 }
-.header-section .menu-mobile-open {
-  padding: 10px;
-  font-size: 20px;
-  color: #F1F6F9;
-  border-top: 1px solid #F1F6F9;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  display: flex;
-  justify-content: space-around;
-}
-.header-section .menu-mobile-open h5:hover {
-  cursor: pointer;
-}
 .header-section .page-menu-container .page-menu-item {
   display: flex;
   justify-content: center;
@@ -156,6 +143,24 @@
 .header-section .page-menu-container .page-menu-item .projects:hover,
 .header-section .page-menu-container .page-menu-item .about:hover {
   background-color: rgba(57, 72, 103, 0.8);
+  cursor: pointer;
+}
+
+.menu-mobile-open {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  color: #F1F6F9;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: space-around;
+  background: #F1F6F9;
+  border-radius: 10px;
+  color: #212A3E;
+}
+
+.menu-mobile-open h5:hover {
   cursor: pointer;
 }
 
@@ -221,7 +226,6 @@ button {
 .projects-section {
   display: grid;
   grid-template-rows: 100px 1fr 100px;
-  height: 850px;
   justify-items: center;
 }
 .projects-section h3 {
@@ -282,27 +286,56 @@ button {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
-.projects-section .desktop-card-container .small-cards-container .item_1, .projects-section .desktop-card-container .small-cards-container .item_2, .projects-section .desktop-card-container .small-cards-container .item_3, .projects-section .desktop-card-container .small-cards-container .item_4 {
-  border: 1px solid blue;
+.projects-section .desktop-card-container .small-cards-container .item_1 {
   background: green;
 }
+.projects-section .desktop-card-container .small-cards-container .item_2 {
+  background: red;
+}
+.projects-section .desktop-card-container .small-cards-container .item_3 {
+  background: blue;
+}
+.projects-section .desktop-card-container .small-cards-container .item_4 {
+  background: black;
+}
+.projects-section .desktop-card-container .small-cards-container .item_1_shadow {
+  background: green;
+  opacity: 0.2;
+}
+.projects-section .desktop-card-container .small-cards-container .item_2_shadow {
+  background: red;
+  opacity: 0.2;
+}
+.projects-section .desktop-card-container .small-cards-container .item_3_shadow {
+  background: blue;
+  opacity: 0.2;
+}
+.projects-section .desktop-card-container .small-cards-container .item_4_shadow {
+  background: black;
+  opacity: 0.2;
+}
 
-body,
-html {
+body {
   height: 100%;
   font-family: "quicksand";
   margin: 0;
-  background-color: #F1F6F9;
+  background: radial-gradient(at 70%, rgba(33, 42, 62, 0.5), rgb(33, 42, 62));
 }
 
 .home-section,
-.about-section {
-  margin-top: 150px;
-  height: 850px;
+.about-section,
+.projects-section {
+  margin-top: 120px;
+  height: 650px;
 }
 .home-section h3,
-.about-section h3 {
+.about-section h3,
+.projects-section h3 {
   margin: 0;
+}
+
+.home-section {
+  color: #F1F6F9;
 }
 
 @media only screen and (min-width: 770px) {
@@ -317,7 +350,8 @@ html {
     justify-self: center;
     justify-content: center;
   }
-  .header-section .name-role-container .role, .header-section .name-role-container .name {
+  .header-section .name-role-container .role,
+  .header-section .name-role-container .name {
     padding-left: 10px;
   }
   .header-section .page-menu-container {
@@ -349,7 +383,7 @@ html {
   .projects-section,
   .about-section,
   .footer-section {
-    margin-top: 120px;
+    margin-top: 100px;
   }
   .projects-section .mob-cards {
     display: none;
@@ -361,6 +395,12 @@ html {
     top: 10px;
   }
   .header-section .page-menu-container {
+    display: none;
+  }
+  .projects-section {
+    height: auto;
+  }
+  .projects-section .desktop-cards {
     display: none;
   }
 }

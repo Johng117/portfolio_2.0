@@ -11,7 +11,6 @@ function App() {
   console.log("App");
 
   const handleMenuValue = (value) => {
-    console.log(value);
     setSectionName({ section: value });
   };
 

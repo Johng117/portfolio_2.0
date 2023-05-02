@@ -1,7 +1,7 @@
 .header-section {
   height: auto;
   width: 100%;
-  background-color: $primary-color;
+  color: $light-color;
   display: grid;
   grid-template-columns: 70% 30%;
   top: 0px;
@@ -73,22 +73,6 @@
     padding-top: 15px;
   }
 
-  .menu-mobile-open {
-    padding: 10px;
-    font-size: 20px;
-    color: $light-color;
-    border-top: 1px solid $light-color;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    display: flex;
-    justify-content: space-around;
-    
-  }
-
-  .menu-mobile-open h5:hover {
-    cursor: pointer;
-  }
-
   .page-menu-container {
     .page-menu-item {
       display: flex;
@@ -113,4 +97,22 @@
       }
     }
   }
+}
+
+.menu-mobile-open {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  color: $light-color;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: space-around;
+  background: $light-color;
+  border-radius: 10px;
+  color: $primary-color
+}
+
+.menu-mobile-open h5:hover {
+  cursor: pointer;
 }
