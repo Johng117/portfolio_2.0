@@ -1,4 +1,23 @@
+import { useState } from "react";
+
 const About = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleInputs = (e) => {
+    e.preventDefault();
+    e.target.id === "name"
+      ? setName(e.target.value)
+      : e.target.id === "email"
+      ? setEmail(e.target.value)
+      : setMessage(e.target.value);
+  };
+
+  const handleSubmit = (e)=> {
+
+  }
+  
   return (
     <section className="about-section">
       <div className="about-heading-container">
@@ -7,7 +26,7 @@ const About = () => {
       <div className="text-form-container">
         <div></div>
         <div className="form-container">
-          <form className="about-form">
+          <form className="about-form" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="name-label">
                 Name:
@@ -16,6 +35,8 @@ const About = () => {
                   id="name"
                   name="name"
                   className="input-name"
+                  onChange={(e) => handleInputs(e)}
+                  value={name}
                 />
               </label>
             </div>
@@ -27,6 +48,8 @@ const About = () => {
                   id="email"
                   name="email"
                   className="input-email"
+                  onChange={(e) => handleInputs(e)}
+                  value={email}
                 />
               </label>
             </div>
@@ -36,6 +59,9 @@ const About = () => {
                 <textarea
                   name="message-content"
                   className="message"
+                  id="message"
+                  onChange={(e) => handleInputs(e)}
+                  value={message}
                 />
               </label>
               <br />
