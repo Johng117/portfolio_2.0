@@ -1,23 +1,61 @@
 import { useState } from "react";
 
 const About = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [inputs, setInputs] = useState({ name: "", email: "", message: "" });
+
+  //  errors of inputted data
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+
+  // thanks message on submission
+  const [thanks, setThanks] = useState(false);
+
+  // managing error response of post request
+  const [showError, setShowError] = useState(false);
 
   const handleInputs = (e) => {
     e.preventDefault();
-    e.target.id === "name"
-      ? setName(e.target.value)
-      : e.target.id === "email"
-      ? setEmail(e.target.value)
-      : setMessage(e.target.value);
+    setInputs({ ...inputs, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = (e)=> {
+  // a function to reset values
+  const resetValues = () => {
+    setInputs({ name: "", email: "", message: "" });
+  };
 
-  }
-  
+  // a function to validate name input
+  const validName = (name) => {
+    return name.length > 2 && name.length < 30 ? true : false;
+  };
+  // a function to validate email input
+  const validEmail = (email) => {
+    return /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(
+      email
+    );
+  };
+  // a function to validate inputted message
+  const validMessage = (message) => {
+    return message.length >= 10 ? true : false;
+  };
+
+  // a function to check that all inputs are valid and render errors should there be an invalid input
+  const validateAll = () => {
+    validName(inputs.name) ? setNameError(false) : setNameError(true);
+    validEmail(inputs.email) ? setEmailError(false) : setEmailError(true);
+    validMessage(inputs.message)
+      ? setMessageError(false)
+      : setMessageError(true);
+    return (
+      validName(inputs.name) &&
+      validEmail(inputs.email) &&
+      validMessage(inputs.message)
+    );
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  };
+
   return (
     <section className="about-section">
       <div className="about-heading-container">
@@ -36,7 +74,7 @@ const About = () => {
                   name="name"
                   className="input-name"
                   onChange={(e) => handleInputs(e)}
-                  value={name}
+                  value={inputs.name}
                 />
               </label>
             </div>
@@ -49,7 +87,7 @@ const About = () => {
                   name="email"
                   className="input-email"
                   onChange={(e) => handleInputs(e)}
-                  value={email}
+                  value={inputs.email}
                 />
               </label>
             </div>
@@ -61,7 +99,7 @@ const About = () => {
                   className="message"
                   id="message"
                   onChange={(e) => handleInputs(e)}
-                  value={message}
+                  value={inputs.message}
                 />
               </label>
               <br />
