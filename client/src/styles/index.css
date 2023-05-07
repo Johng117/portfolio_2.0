@@ -183,12 +183,21 @@
 }
 .about-section .form-container .about-form {
   display: grid;
-  grid-template-rows: 30px 30px 220px;
+  grid-auto-flow: row;
   gap: 5px;
   padding-top: 20px;
   font-weight: 500;
   color: #F1F6F9;
   font-size: 18px;
+}
+.about-section .form-container .about-form .name-error h5,
+.about-section .form-container .about-form .email-error h5,
+.about-section .form-container .about-form .message-error h5 {
+  margin: 0;
+  height: 20px;
+  color: #d8000c;
+  background: #F1F6F9;
+  width: 50%;
 }
 .about-section .form-container .input-name,
 .about-section .form-container .input-email {
@@ -196,7 +205,10 @@
   border: 1px solid #394867;
   font-size: 16px;
   font-family: "quicksand";
-  background-color: #F1F6F9;
+  background: #F1F6F9;
+}
+.about-section .form-container .message-container {
+  height: 200px;
 }
 .about-section .form-container .message-label {
   display: grid;

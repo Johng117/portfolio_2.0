@@ -8,7 +8,7 @@ const pool = require("./db.js");
 app.use(cors());
 app.use(express.json());
 
-app.use("/message", require("./routes/messages.js"));
+app.use("/messages", require("./routes/messages.js"));
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);

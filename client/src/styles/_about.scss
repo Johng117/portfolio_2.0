@@ -19,12 +19,25 @@
 
     .about-form {
       display: grid;
-      grid-template-rows: 30px 30px 220px;
+      grid-auto-flow: row;
       gap: 5px;
       padding-top: 20px;
       font-weight: 500;
       color: $light-color;
       font-size: 18px;
+      
+
+      .name-error,
+      .email-error,
+      .message-error {
+        h5 {
+          margin: 0;
+          height: 20px;
+          color: #d8000c;
+          background: $light-color;
+          width: 50%
+        }
+      }
     }
 
     .input-name,
@@ -33,9 +46,12 @@
       border: 1px solid $secondary-color;
       font-size: 16px;
       font-family: "quicksand";
-      background-color: $light-color;
+      background: $light-color;
     }
 
+    .message-container {
+      height: 200px;
+    }
     .message-label {
       display: grid;
       gap: 5px;

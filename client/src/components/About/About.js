@@ -52,8 +52,31 @@ const About = () => {
       validMessage(inputs.message)
     );
   };
+
+  const sendMessage = async (message) => {
+    try {
+      const body = message;
+      const headers = { "Content-Type": "application/json" };
+      const response = await fetch("http://localhost:3001/messages/", {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(body),
+      });
+      const data = await response.json();
+      console.log(data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(inputs);
+    let valid = validateAll();
+    if (valid) {
+      sendMessage(inputs);
+      resetValues();
+    }
   };
 
   return (
@@ -65,7 +88,7 @@ const About = () => {
         <div></div>
         <div className="form-container">
           <form className="about-form" onSubmit={handleSubmit}>
-            <div>
+            <div className="form-name">
               <label htmlFor="name" className="name-label">
                 Name:
                 <input
@@ -78,7 +101,10 @@ const About = () => {
                 />
               </label>
             </div>
-            <div>
+            <div className="name-error">
+              {nameError && <h5>Error: Name to short.</h5>}
+            </div>
+            <div className="form-email">
               <label htmlFor="name" className="email-label">
                 E-mail:
                 <input
@@ -90,6 +116,9 @@ const About = () => {
                   value={inputs.email}
                 />
               </label>
+            </div>
+            <div className="email-error">
+              {emailError && <h5>Error: Invalid email.</h5>}
             </div>
             <div className="message-container">
               <label htmlFor="message" className="message-label">
@@ -103,6 +132,9 @@ const About = () => {
                 />
               </label>
               <br />
+            </div>
+            <div className="message-error">
+              {messageError && <h5>Error: Message to short.</h5>}
             </div>
             <button>Send</button>
           </form>
