@@ -75,14 +75,13 @@
 
   .page-menu-container {
     display: flex;
-    
+
     .page-menu-item {
       display: flex;
       justify-content: center;
       align-self: center;
       height: 80%;
 
-    
       .home,
       .projects,
       .about {
@@ -91,16 +90,18 @@
         align-items: center;
         padding-bottom: 2px;
         width: 150px;
+        border-radius: 15px;
         text-align: center;
         color: $light-color;
-        background: $secondary-color;
-        transition: width 2s;
+        background: $secondary-transparent;
+        transition: background 1s;
+        transition: color 0.1s;
         margin: 0;
-        
 
         &:hover {
           cursor: pointer;
-          width: 170px;
+          color: $primary-color-hover;
+          background: $hover-color;
 
           // box-shadow: 2px 2px 3px 1px white, -2px 2px 3px white, 2px -2px 3px white, -2px -2px 3px white;
         }
