@@ -74,10 +74,15 @@
   }
 
   .page-menu-container {
+    display: flex;
+    
     .page-menu-item {
       display: flex;
       justify-content: center;
+      align-self: center;
+      height: 80%;
 
+    
       .home,
       .projects,
       .about {
@@ -86,13 +91,18 @@
         align-items: center;
         padding-bottom: 2px;
         width: 150px;
-        border-radius: 10px;
         text-align: center;
-        margin: 10px;
         color: $light-color;
+        background: $secondary-color;
+        transition: width 2s;
+        margin: 0;
+        
+
         &:hover {
-          background-color: rgb(57, 72, 103, 0.8);
           cursor: pointer;
+          width: 170px;
+
+          // box-shadow: 2px 2px 3px 1px white, -2px 2px 3px white, 2px -2px 3px white, -2px -2px 3px white;
         }
       }
     }
@@ -110,7 +120,7 @@
   justify-content: space-around;
   background: $light-color;
   border-radius: 10px;
-  color: $primary-color
+  color: $primary-color;
 }
 
 .menu-mobile-open h5:hover {
