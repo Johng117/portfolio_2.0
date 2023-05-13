@@ -31,6 +31,7 @@ const Header = ({ handleMenuValue }) => {
         menuArray={menuArray}
         handlePageMenuClick={handlePageMenuClick}
       />
+
       <Hamburger openMenu={openMenu} isHamOpen={isHamOpen} />
       {openMobMenu && (
         <MenuMobile

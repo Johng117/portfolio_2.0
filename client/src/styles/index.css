@@ -124,6 +124,7 @@
 }
 .header-section .page-menu-container {
   display: flex;
+  font-family: "Bungee Hairline";
 }
 .header-section .page-menu-container .page-menu-item {
   display: flex;
@@ -137,7 +138,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2px;
   width: 150px;
   border-radius: 15px;
   text-align: center;
@@ -151,8 +151,9 @@
 .header-section .page-menu-container .page-menu-item .projects:hover,
 .header-section .page-menu-container .page-menu-item .about:hover {
   cursor: pointer;
-  color: rgba(33, 42, 62, 0.7333333333);
+  color: #212a3e;
   background: #9BA4B5;
+  font-weight: bold;
 }
 
 .menu-mobile-open {
@@ -362,18 +363,7 @@ body {
 @media only screen and (min-width: 770px) {
   .header-section {
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 60px;
-  }
-  .header-section .name-role-container {
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-    justify-self: center;
-    justify-content: center;
-  }
-  .header-section .name-role-container .role,
-  .header-section .name-role-container .name {
-    padding-left: 10px;
+    grid-template-rows: 60px;
   }
   .header-section .page-menu-container {
     grid-row-start: 2;
@@ -395,6 +385,26 @@ body {
   .header-section .page-menu-container :nth-child(3) {
     display: flex;
     justify-content: flex-start;
+  }
+  .header-section .name-role-container {
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    position: absolute;
+    top: 250px;
+    height: 60px;
+  }
+  .header-section .name-role-container .role,
+  .header-section .name-role-container .name {
+    padding-left: 10px;
+    line-height: 60px;
+    padding-top: 20px;
+  }
+  .header-section .name-role-container :nth-child(2) {
+    padding-left: 0px;
+  }
+  .header-section .name-role-container .letter, .header-section .name-role-container .letter-role, .header-section .name-role-container .under {
+    font-size: 40px;
   }
   .header-section .hamburger-container,
   .header-section .menu-mobile-open {

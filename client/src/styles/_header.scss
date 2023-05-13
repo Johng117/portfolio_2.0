@@ -75,6 +75,7 @@
 
   .page-menu-container {
     display: flex;
+    font-family: "Bungee Hairline";
 
     .page-menu-item {
       display: flex;
@@ -88,7 +89,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-bottom: 2px;
         width: 150px;
         border-radius: 15px;
         text-align: center;
@@ -102,6 +102,7 @@
           cursor: pointer;
           color: $primary-color-hover;
           background: $hover-color;
+          font-weight: bold;
 
           // box-shadow: 2px 2px 3px 1px white, -2px 2px 3px white, 2px -2px 3px white, -2px -2px 3px white;
         }
