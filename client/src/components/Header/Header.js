@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Name from "../Name/Name";
+
+import Logo from "../Logo/Logo"
 import Hamburger from "../Hamburger/Hamburger";
 import MenuMobile from "../Menu-Mobile/MenuMobile";
 import MenuFull from "../Menu-Full/MenuFull";
@@ -26,7 +27,7 @@ const Header = ({ handleMenuValue }) => {
 
   return (
     <section className="header-section">
-      <Name />
+      <Logo />
       <MenuFull
         menuArray={menuArray}
         handlePageMenuClick={handlePageMenuClick}

@@ -62,60 +62,8 @@
   color: #F1F6F9;
   display: grid;
   grid-template-columns: 70% 30%;
-  top: 0px;
-  position: absolute;
-}
-.header-section .name-role-container {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-.header-section .name-role-container .under {
-  font-size: 27px;
-  font-weight: 800;
-  color: #F1F6F9;
   top: 10px;
-  animation: under-blink 0.5s;
-  animation-iteration-count: 4;
-  opacity: 0;
-}
-@keyframes under-blink {
-  0% {
-    opacity: 1;
-    background-color: #F1F6F9;
-  }
-  100% {
-    opacity: 0;
-    color: #F1F6F9;
-  }
-}
-.header-section .name-role-container .letter,
-.header-section .name-role-container .letter-role {
-  font-size: 27px;
-  font-weight: 700;
-  color: #F1F6F9;
-  position: relative;
-  opacity: 0;
-  animation: move-text 0.1s forwards;
-  font-family: "Bungee";
-  display: inline-block;
-  line-height: 30px;
-}
-.header-section .name-role-container .letter-role {
-  font-family: "Bungee Hairline";
-}
-@keyframes move-text {
-  0% {
-    opacity: 0;
-    background-color: #F1F6F9;
-  }
-  50% {
-    background-color: #F1F6F9;
-  }
-  100% {
-    opacity: 1;
-    color: #F1F6F9;
-  }
+  position: absolute;
 }
 .header-section .hamburger-container {
   display: flex;
@@ -337,6 +285,59 @@ button {
   opacity: 0.2;
 }
 
+.name-role-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.name-role-container .under {
+  font-size: 27px;
+  font-weight: 800;
+  color: #F1F6F9;
+  top: 10px;
+  animation: under-blink 0.5s;
+  animation-iteration-count: 4;
+  opacity: 0;
+}
+@keyframes under-blink {
+  0% {
+    opacity: 1;
+    background-color: #F1F6F9;
+  }
+  100% {
+    opacity: 0;
+    color: #F1F6F9;
+  }
+}
+.name-role-container .letter,
+.name-role-container .letter-role {
+  font-size: 27px;
+  font-weight: 700;
+  color: #F1F6F9;
+  position: relative;
+  opacity: 0;
+  animation: move-text 0.1s forwards;
+  font-family: "Bungee";
+  display: inline-block;
+  line-height: 30px;
+}
+.name-role-container .letter-role {
+  font-family: "Bungee Hairline";
+}
+@keyframes move-text {
+  0% {
+    opacity: 0;
+    background-color: #F1F6F9;
+  }
+  50% {
+    background-color: #F1F6F9;
+  }
+  100% {
+    opacity: 1;
+    color: #F1F6F9;
+  }
+}
+
 body {
   height: 100%;
   font-family: "quicksand";
@@ -362,13 +363,13 @@ body {
 
 @media only screen and (min-width: 770px) {
   .header-section {
-    grid-template-columns: 1fr;
-    grid-template-rows: 60px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
   }
   .header-section .page-menu-container {
     grid-row-start: 2;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     text-align: center;
   }
   .header-section .page-menu-container .page-menu-item {
@@ -386,26 +387,6 @@ body {
     display: flex;
     justify-content: flex-start;
   }
-  .header-section .name-role-container {
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-    position: absolute;
-    top: 250px;
-    height: 60px;
-  }
-  .header-section .name-role-container .role,
-  .header-section .name-role-container .name {
-    padding-left: 10px;
-    line-height: 60px;
-    padding-top: 20px;
-  }
-  .header-section .name-role-container :nth-child(2) {
-    padding-left: 0px;
-  }
-  .header-section .name-role-container .letter, .header-section .name-role-container .letter-role, .header-section .name-role-container .under {
-    font-size: 40px;
-  }
   .header-section .hamburger-container,
   .header-section .menu-mobile-open {
     display: none;
@@ -415,6 +396,49 @@ body {
   .about-section,
   .footer-section {
     margin-top: 100px;
+  }
+  .home-section .name-role-container {
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    position: absolute;
+    top: 250px;
+    height: 60px;
+  }
+  .home-section .name-role-container .role,
+  .home-section .name-role-container .name {
+    padding-left: 10px;
+    line-height: 60px;
+    padding-top: 20px;
+  }
+  .home-section .name-role-container .role {
+    padding-top: 24px;
+  }
+  .home-section .name-role-container :nth-child(2) {
+    padding-left: 0px;
+  }
+  .home-section .name-role-container .letter,
+  .home-section .name-role-container .letter-role,
+  .home-section .name-role-container .under {
+    font-size: 40px;
+  }
+  .home-section .name-role-container .static-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 27px;
+  }
+  .home-section .name-role-container .static-content .static-name,
+  .home-section .name-role-container .static-content .static-role {
+    font-size: 40px;
+    margin: 0;
+    line-height: 60px;
+  }
+  .home-section .name-role-container .static-content .static-name {
+    font-family: "Bungee";
+  }
+  .home-section .name-role-container .static-content .static-role {
+    font-family: "Bungee Hairline";
   }
   .projects-section .mob-cards {
     display: none;
