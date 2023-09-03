@@ -404,6 +404,7 @@ body {
     position: absolute;
     top: 250px;
     height: 60px;
+    margin-left: 15px;
   }
   .home-section .name-role-container .role,
   .home-section .name-role-container .name {
