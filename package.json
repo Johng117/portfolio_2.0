@@ -4,10 +4,10 @@
   "description": "portfolio project",
   "main": "server.js",
   "scripts": {
-    "start": "vite",
+    "start": "vite --debug",
     "build": "vite build",
     "serve": "vite preview",
-    "info": "vite --debug"
+    "info": "vite -l warn"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
     "vite": "^4.4.9"
   }
 }

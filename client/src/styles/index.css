@@ -338,6 +338,15 @@ button {
   }
 }
 
+.not-found {
+  position: absolute;
+  display: flex;
+  margin: 300px auto;
+  z-index: 10;
+  color: white;
+  background-color: blue;
+}
+
 body {
   height: 100%;
   font-family: "quicksand";

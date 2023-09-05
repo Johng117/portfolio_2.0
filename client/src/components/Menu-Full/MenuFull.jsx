@@ -6,7 +6,7 @@ const MenuFull = ({ menuArray, handlePageMenuClick }) => {
       <ul>
         {menuArray.map((item, index) => {
           return (
-            <li>
+            <li key={index}>
               <Link to={item}>
                 <button>{item === "/" ? "home" : item}</button>
               </Link>
