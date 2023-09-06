@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const MenuFull = ({ menuArray, handlePageMenuClick }) => {
   return (
     <section className="page-menu-container">
-      <ul>
+      <ul className="menu-list">
         {menuArray.map((item, index) => {
           return (
             <li key={index}>

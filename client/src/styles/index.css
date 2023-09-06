@@ -191,6 +191,7 @@ button {
   color: #F1F6F9;
   font-family: "quicksand";
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .projects-section {
@@ -340,11 +341,18 @@ button {
 
 .not-found {
   position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
   display: flex;
-  margin: 300px auto;
-  z-index: 10;
-  color: white;
-  background-color: blue;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 200px;
+  color: #212A3E;
+  background: whitesmoke;
+}
+.not-found button {
+  width: 200px;
 }
 
 body {

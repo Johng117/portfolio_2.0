@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"
-import Logo from "../Logo/Logo"
+import { Link } from "react-router-dom";
+import Logo from "../Logo/Logo";
 import Hamburger from "../Hamburger/Hamburger";
 import MenuMobile from "../Menu-Mobile/MenuMobile";
 import MenuFull from "../Menu-Full/MenuFull";
@@ -20,9 +20,7 @@ const Header = () => {
     setOpenMobMenu(false);
   };
 
-  const handlePageMenuClick = (e) => {
-   
-  };
+  const handlePageMenuClick = (e) => {};
 
   return (
     <section className="header-section">
