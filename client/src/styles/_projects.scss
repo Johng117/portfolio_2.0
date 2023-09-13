@@ -70,33 +70,12 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
 
-      .item_1 {
+      .inactive {
         background: green;
-      }
-      .item_2 {
-        background: red;
-      }
-      .item_3 {
-        background: blue;
-      }
-      .item_4 {
-        background: black;
       }
 
-      .item_1_shadow {
+      .active {
         background: green;
-        opacity: 0.2;
-      }
-      .item_2_shadow {
-        background: red;
-        opacity: 0.2;
-      }
-      .item_3_shadow {
-        background: blue;
-        opacity: 0.2;
-      }
-      .item_4_shadow {
-        background: black;
         opacity: 0.2;
       }
     }

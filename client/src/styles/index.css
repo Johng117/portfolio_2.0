@@ -59,7 +59,7 @@
 .header-section {
   height: auto;
   width: 100%;
-  color: #F1F6F9;
+  color: green;
   display: grid;
   grid-template-columns: 70% 30%;
   top: 10px;
@@ -257,32 +257,11 @@ button {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
-.projects-section .desktop-card-container .small-cards-container .item_1 {
+.projects-section .desktop-card-container .small-cards-container .inactive {
   background: green;
 }
-.projects-section .desktop-card-container .small-cards-container .item_2 {
-  background: red;
-}
-.projects-section .desktop-card-container .small-cards-container .item_3 {
-  background: blue;
-}
-.projects-section .desktop-card-container .small-cards-container .item_4 {
-  background: black;
-}
-.projects-section .desktop-card-container .small-cards-container .item_1_shadow {
+.projects-section .desktop-card-container .small-cards-container .active {
   background: green;
-  opacity: 0.2;
-}
-.projects-section .desktop-card-container .small-cards-container .item_2_shadow {
-  background: red;
-  opacity: 0.2;
-}
-.projects-section .desktop-card-container .small-cards-container .item_3_shadow {
-  background: blue;
-  opacity: 0.2;
-}
-.projects-section .desktop-card-container .small-cards-container .item_4_shadow {
-  background: black;
   opacity: 0.2;
 }
 
