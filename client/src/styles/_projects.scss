@@ -69,15 +69,21 @@
       gap: 5px;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+      text-align: center;
 
       .inactive {
         background: green;
+        text-align: center;
       }
 
       .active {
         background: green;
         opacity: 0.2;
       }
+    }
+
+    .big-card-container {
+      
     }
   }
 }

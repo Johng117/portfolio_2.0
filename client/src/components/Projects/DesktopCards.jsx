@@ -2,17 +2,18 @@ import { useState } from "react";
 
 const DesktopCards = () => {
   const [boxes, setBoxes] = useState([true, false, false, false]);
-  console.log(boxes);
-  const [card, setCard] = useState("item_1");
+  const [card, setCard] = useState(0);
 
   const handleActivate = (e) => {
     e.preventDefault();
-    const clearBoxes = boxes.map((item) => (item = false));
-    clearBoxes[e.target.id] = true;
-    setBoxes([...clearBoxes]);
-
-    // setCard(e.target.id);
-    console.log(e.target.className);
+    // const clearBoxes = boxes.map((item) => (item = false));
+    // clearBoxes[e.target.id] = true;
+    // setBoxes([...clearBoxes]);
+    const editedBoxes = boxes.map((_, i) =>
+      i === Number(e.target.id) ? true : false
+    );
+    setBoxes([...editedBoxes]);
+    setCard(Number(e.target.id)+1);
   };
 
   const setLargeCard = (e) => {};
@@ -29,7 +30,7 @@ const DesktopCards = () => {
                 onClick={handleActivate}
                 className={arr[i] ? "active" : "inactive"}
               >
-                john
+                <h1>{i + 1}</h1>
               </div>
             );
           })}

@@ -256,9 +256,11 @@ button {
   gap: 5px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  text-align: center;
 }
 .projects-section .desktop-card-container .small-cards-container .inactive {
   background: green;
+  text-align: center;
 }
 .projects-section .desktop-card-container .small-cards-container .active {
   background: green;
