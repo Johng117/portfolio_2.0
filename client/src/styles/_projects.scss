@@ -51,7 +51,7 @@
 
   .desktop-card-container {
     border: 1px solid red;
-    width: 900px;
+    width: 1000px;
     display: grid;
     grid-template-columns: 50% 50%;
     padding: 5px 10px 5px 5px;
@@ -74,10 +74,14 @@
       .inactive {
         background: green;
         text-align: center;
+        border-radius: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center
       }
 
       .active {
-        background: green;
+        @extend .inactive;
         opacity: 0.2;
       }
     }

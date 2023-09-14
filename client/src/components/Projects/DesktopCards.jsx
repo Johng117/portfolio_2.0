@@ -1,4 +1,6 @@
 import { useState } from "react";
+import DeskTopCardSmall from "./DesktopCardSmall";
+import Data from "./ProjectData";
 
 const DesktopCards = () => {
   const [boxes, setBoxes] = useState([true, false, false, false]);
@@ -6,14 +8,12 @@ const DesktopCards = () => {
 
   const handleActivate = (e) => {
     e.preventDefault();
-    // const clearBoxes = boxes.map((item) => (item = false));
-    // clearBoxes[e.target.id] = true;
-    // setBoxes([...clearBoxes]);
+    console.log(e.target.id);
     const editedBoxes = boxes.map((_, i) =>
       i === Number(e.target.id) ? true : false
     );
     setBoxes([...editedBoxes]);
-    setCard(Number(e.target.id)+1);
+    setCard(Number(e.target.id) + 1);
   };
 
   const setLargeCard = (e) => {};
@@ -22,16 +22,15 @@ const DesktopCards = () => {
     <section>
       <div className="desktop-card-container">
         <div className="small-cards-container">
-          {boxes.map((_, i, arr) => {
+          {boxes.map((_, index, arr) => {
             return (
-              <div
-                key={i}
-                id={i}
-                onClick={handleActivate}
-                className={arr[i] ? "active" : "inactive"}
-              >
-                <h1>{i + 1}</h1>
-              </div>
+              <DeskTopCardSmall
+                image={Data[index+1].image}
+                key={index}
+                index={index}
+                handleActivate={handleActivate}
+                isActive={arr[index]}
+              />
             );
           })}
         </div>
