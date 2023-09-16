@@ -1,31 +1,35 @@
 import { useState } from "react";
 import DeskTopCardSmall from "./DesktopCardSmall";
+import DeskTopCardLarge from "./DesktopCardLarge";
 import Data from "./ProjectData";
 
 const DesktopCards = () => {
-  const [boxes, setBoxes] = useState([true, false, false, false]);
-  const [card, setCard] = useState(0);
+  const [cards, setCards] = useState([true, false, false, false]);
+  const [cardIndex, setCardIndex] = useState(0);
+  const [largeCard, setLargeCard] = useState(0);
 
   const handleActivate = (e) => {
     e.preventDefault();
     console.log(e.target.id);
-    const editedBoxes = boxes.map((_, i) =>
+    const editedBoxes = cards.map((_, i) =>
       i === Number(e.target.id) ? true : false
     );
-    setBoxes([...editedBoxes]);
-    setCard(Number(e.target.id) + 1);
+    setCards([...editedBoxes]);
+    setCardIndex(Number(e.target.id) + 1);
+    setLargeCard(Number(e.target.id) + 1);
+    
   };
 
-  const setLargeCard = (e) => {};
+  // const setLargeCard = (e) => {};
 
   return (
     <section>
       <div className="desktop-card-container">
         <div className="small-cards-container">
-          {boxes.map((_, index, arr) => {
+          {cards.map((_, index, arr) => {
             return (
               <DeskTopCardSmall
-                image={Data[index+1].image}
+                cardData={Data[index+1]}
                 key={index}
                 index={index}
                 handleActivate={handleActivate}
@@ -37,7 +41,7 @@ const DesktopCards = () => {
 
         <div className="big-card-container">
           <div>
-            <h5>{card}</h5>
+            <DeskTopCardLarge cardData={Data[largeCard]}/>
           </div>
         </div>
       </div>

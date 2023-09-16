@@ -259,12 +259,18 @@ button {
   text-align: center;
 }
 .projects-section .desktop-card-container .small-cards-container .inactive, .projects-section .desktop-card-container .small-cards-container .active {
+  height: 150px;
+  width: 150px;
   background: green;
   text-align: center;
-  border-radius: 150px;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-self: center;
+  align-self: center;
+  cursor: grab;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .projects-section .desktop-card-container .small-cards-container .active {
   opacity: 0.2;
