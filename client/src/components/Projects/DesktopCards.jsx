@@ -6,7 +6,8 @@ import Data from "./ProjectData";
 const DesktopCards = () => {
   const [cards, setCards] = useState([true, false, false, false]);
   const [cardIndex, setCardIndex] = useState(0);
-  const [largeCard, setLargeCard] = useState(0);
+  const [largeCard, setLargeCard] = useState(1);
+  console.log(Data);
 
   const handleActivate = (e) => {
     e.preventDefault();

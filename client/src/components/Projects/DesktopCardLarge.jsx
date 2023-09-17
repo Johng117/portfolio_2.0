@@ -1,8 +1,13 @@
 function DeskTopCardLarge({ cardData }) {
-  console.log(cardData.image);
+
   return (
     <div>
-      <img src={cardData.image} height={200} width={200}></img>
+      <img
+        src={cardData.image}
+        height={200}
+        width={200}
+        alt={cardData.alt}
+      ></img>
     </div>
   );
 }
