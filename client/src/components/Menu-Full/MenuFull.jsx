@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const MenuFull = ({ menuArray, handlePageMenuClick }) => {
+const MenuFull = ({ menuArray }) => {
   return (
     <section className="page-menu-container">
-      <ul className="menu-list">
+      <ul className="menu-list" >
         {menuArray.map((item, index) => {
           return (
             <li key={index}>

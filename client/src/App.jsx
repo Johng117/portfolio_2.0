@@ -5,21 +5,17 @@ import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
 import Home from "./components/Home/Home.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
-import {
-  Routes,
-  Route,
-  Outlet,
-} from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 
 function App() {
   const animateOn = useRef(0);
 
   return (
     <div className="App">
-      <Header />
+      <Header animateOn={animateOn} />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home animateOn={animateOn} />} />
+          <Route index element={<Home />} />
           <Route path="projects" element={<Projects />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<NotFound />} />

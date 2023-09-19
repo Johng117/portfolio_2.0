@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import Logo from "../Logo/Logo";
 import Hamburger from "../Hamburger/Hamburger";
 import MenuMobile from "../Menu-Mobile/MenuMobile";
 import MenuFull from "../Menu-Full/MenuFull";
+import Name from "../Name/Name";
 
-const Header = () => {
+const Header = ( { animateOn }) => {
   const [openMobMenu, setOpenMobMenu] = useState(false);
   const [isHamOpen, setIsHamOpen] = useState(false);
   const menuArray = ["/", "projects", "about"];
@@ -24,7 +23,7 @@ const Header = () => {
 
   return (
     <section className="header-section">
-      <Logo />
+      <Name animateOn={animateOn} />
       <MenuFull
         menuArray={menuArray}
         handlePageMenuClick={handlePageMenuClick}
