@@ -2,7 +2,8 @@ import { useState } from "react";
 import Hamburger from "../Hamburger/Hamburger";
 import MenuMobile from "../Menu-Mobile/MenuMobile";
 import MenuFull from "../Menu-Full/MenuFull";
-import Name from "../Name/Name";
+import MobName from "../Mob-Name/MobName"
+
 
 const Header = ( { animateOn }) => {
   const [openMobMenu, setOpenMobMenu] = useState(false);
@@ -23,12 +24,12 @@ const Header = ( { animateOn }) => {
 
   return (
     <section className="header-section">
-      <Name animateOn={animateOn} />
+      
       <MenuFull
         menuArray={menuArray}
         handlePageMenuClick={handlePageMenuClick}
       />
-
+      <MobName />
       <Hamburger openMenu={openMenu} isHamOpen={isHamOpen} />
       {openMobMenu && (
         <MenuMobile

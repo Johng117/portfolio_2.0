@@ -8,11 +8,11 @@ export default defineConfig(() => {
       outDir: "build",
     },
     plugins: [react(), eslint()],
-    server: {
-      watch: {
-        usePolling: true,
-      },
-    },
+    // server: {
+    //   watch: {
+    //     usePolling: true,
+    //   },
+    // },
     test: {
       global: true,
       environment: "jsdom",
