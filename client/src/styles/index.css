@@ -62,7 +62,6 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 80px;
-  border-bottom: 1px solid #f0ebd8;
   background-color: #0d1321;
   font-family: "bungee Hairline";
   color: #f0ebd8;
@@ -85,7 +84,6 @@
 }
 
 .menu-mobile-open {
-  padding: 10px;
   font-size: 20px;
   color: #f0ebd8;
   grid-column-start: 1;
@@ -95,22 +93,35 @@
   background: #f0f4ef;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: #212A3E;
+  color: #0d1321;
   position: absolute;
   top: 60px;
-  width: 50%;
   left: 25%;
+  width: 50%;
 }
 .menu-mobile-open ul {
   margin: 0;
   padding: 0;
+  width: 100%;
+}
+.menu-mobile-open ul li {
+  text-align: center;
+  transition: all 0.5s ease-out;
 }
 .menu-mobile-open ul li h5 {
   margin: 0;
+  font-size: 15px;
+  font-weight: bolder;
 }
-
-.menu-mobile-open h5:hover {
+.menu-mobile-open ul li:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.menu-mobile-open ul li:hover {
   cursor: pointer;
+  color: #f0ebd8;
+  background-color: #0d1321;
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 770px) {
@@ -346,21 +357,17 @@ button {
   flex-direction: column;
   text-align: center;
   padding-top: 200px;
-  color: #212A3E;
+  color: #0d1321;
   background: whitesmoke;
 }
 .not-found button {
   width: 200px;
 }
 
-@font-face {
-  font-family: "400";
-  font-display: fallback;
-  src: url("../assets/fonts/BungeeHairline-Regular.ttf") format("ttf");
-}
 body {
   height: 100%;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .home-section,

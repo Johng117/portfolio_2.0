@@ -7,15 +7,15 @@
 @import "./_name.scss";
 @import "./_not-found.scss";
 
-@font-face {
-    font-family: "400";
-    font-display: fallback;
-    src: url("../assets/fonts/BungeeHairline-Regular.ttf") format("ttf");
-  }
+
+// * {
+//   border: 1px solid red;
+// }
 
 body {
   height: 100%;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .home-section,
