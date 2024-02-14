@@ -3,13 +3,25 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 80px;
-  
+  border-bottom: 1px solid $light-color;
+  background-color: #0d1821;
+
   li {
     list-style-type: none;
   }
   .hamburger-container {
     display: grid;
     padding: 5px 5px 0px 0px;
+  }
+  img {
+    border-radius: px;
+  }
+  .letter-j {
+    background-color: $light-color;
+  }
+  .mobile-name {
+    display: grid;
+    grid-template-columns: 80px 1fr;
   }
 }
 
@@ -22,7 +34,7 @@
   grid-column-end: 3;
   display: flex;
   justify-content: space-around;
-  background: $light-color;
+  background: #f0f4ef;
   border-radius: 10px;
   color: $primary-color;
 }

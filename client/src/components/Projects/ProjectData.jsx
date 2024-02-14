@@ -1,24 +1,22 @@
-import portfolio from "../../assets/portfolio.png";
-import adjustable from "../../assets/adjustable-wrench.png";
 
 const Data = {
   1: {
-    image: portfolio,
+    image: "",
     name: "portfolio icon",
     alt: "image of folder representing a portfolio",
   },
   2: {
-    image: adjustable,
+    image: "",
     name: "adjustable wrench icon",
     alt: "image of a two adjustable wrenches arranged in an x shape",
   },
   3: {
-    image: adjustable,
+    image: "",
     name: "adjustable wrench icon",
     alt: "image of a two adjustable wrenches arranged in an x shape",
   },
   4: {
-    image: adjustable,
+    image: "",
     name: "adjustable wrench icon",
     alt: "image of a two adjustable wrenches arranged in an x shape",
   },

@@ -1,11 +1,10 @@
 
-
-const MobName=()=> {
-    return (
-        <div>
-            <h1>John</h1>
-        </div>
-    )
-}
+const MobName = () => {
+  return (
+    <div className="mobile-name">
+      <h1>JG</h1>
+    </div>
+  );
+};
 
 export default MobName;

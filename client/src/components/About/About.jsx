@@ -9,10 +9,10 @@ const About = () => {
   const [messageError, setMessageError] = useState(false);
 
   // thanks message on submission
-  const [thanks, setThanks] = useState(false);
+  // const [thanks, setThanks] = useState(false);
 
   // managing error response of post request
-  const [showError, setShowError] = useState(false);
+  // const [showError, setShowError] = useState(false);
 
   const handleInputs = (e) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ const About = () => {
   };
   // a function to validate email input
   const validEmail = (email) => {
-    return /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(
+    return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(
       email
     );
   };
