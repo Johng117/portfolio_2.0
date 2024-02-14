@@ -1,12 +1,10 @@
-
-
 .header-section {
   height: auto;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 80px;
   border-bottom: 1px solid $light-color;
-  background-color: #0d1821;
+  background-color: #0d1321;
   font-family: "bungee Hairline";
   color: $light-color;
 
@@ -24,12 +22,7 @@
     display: grid;
     padding: 5px;
   }
-  img {
-    border-radius: px;
-  }
-  .letter-j {
-    background-color: $light-color;
-  }
+
   .mobile-name {
     display: grid;
     grid-template-columns: 80px 1fr;
@@ -38,7 +31,6 @@
 }
 
 .menu-mobile-open {
-  margin: 10px;
   padding: 10px;
   font-size: 20px;
   color: $light-color;
@@ -47,9 +39,24 @@
   display: flex;
   justify-content: space-around;
   background: #f0f4ef;
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   color: $primary-color;
+  position: absolute;
+  top: 60px;
+  width: 50%;
+  left: 25%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li h5 {
+    margin: 0;
+  }
 }
+
 
 .menu-mobile-open h5:hover {
   cursor: pointer;

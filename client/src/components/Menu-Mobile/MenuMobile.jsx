@@ -6,16 +6,18 @@ const MenuMobile = ( { menuArray, handleMobMenuClick }) => {
 
   return (
     <section className="menu-mobile-open">
-      {menuArray.map((_, index) => {
-        return (
-          <MobMenuItem
-            key={index}
-            item={menuArray[index]}
-            className={menuArray[index]}
-            handleMobMenuClick={handleMobMenuClick}
-          />
-        );
-      })}
+      <ul>
+        {menuArray.map((_, index) => {
+          return (
+            <MobMenuItem
+              key={index}
+              item={menuArray[index]}
+              className={menuArray[index]}
+              handleMobMenuClick={handleMobMenuClick}
+            />
+          );
+        })}
+      </ul>
     </section>
   );
 };
