@@ -1,6 +1,6 @@
 .hamburger-btn {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background: transparent;
   margin: 5px;
   display: flex;
@@ -11,7 +11,7 @@
 .hamburger-icon-closed {
   position: relative;
   height: auto;
-  width: 27px;
+  width: 23px;
   display: inline-block;
   cursor: pointer;
   margin-top: 10px;
@@ -20,14 +20,14 @@
   position: absolute;
   background-color: #f0f4ef;
   width: 100%;
-  height: 3px;
+  height: 2px;
   border-radius: 5px;
 }
 .hamburger-icon-closed span:nth-child(2) {
-  top: 10px;
+  top: 8px;
 }
 .hamburger-icon-closed span:nth-child(3) {
-  top: 20px;
+  top: 16px;
 }
 
 .hamburger-icon-open {
@@ -64,13 +64,19 @@
   grid-template-columns: 1fr 80px;
   border-bottom: 1px solid #edf2f4;
   background-color: #0d1821;
+  font-family: "bungee Hairline";
+  color: #edf2f4;
+}
+.header-section .mobile-name h1 {
+  margin: 0;
+  padding-left: 15px;
 }
 .header-section li {
   list-style-type: none;
 }
 .header-section .hamburger-container {
   display: grid;
-  padding: 5px 5px 0px 0px;
+  padding: 5px;
 }
 .header-section img {
   border-radius: px;
@@ -81,6 +87,7 @@
 .header-section .mobile-name {
   display: grid;
   grid-template-columns: 80px 1fr;
+  height: 60px;
 }
 
 .menu-mobile-open {
@@ -187,7 +194,6 @@ button {
   border-radius: 8px;
   background-color: #394867;
   color: #edf2f4;
-  font-family: "quicksand";
   font-size: 1rem;
   cursor: pointer;
 }
@@ -342,9 +348,13 @@ button {
   width: 200px;
 }
 
+@font-face {
+  font-family: "400";
+  font-display: fallback;
+  src: url("../assets/fonts/BungeeHairline-Regular.ttf") format("ttf");
+}
 body {
   height: 100%;
-  font-family: "quicksand";
   margin: 0;
 }
 

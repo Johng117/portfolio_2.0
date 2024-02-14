@@ -1,3 +1,5 @@
+
+
 .header-section {
   height: auto;
   width: 100%;
@@ -5,13 +7,22 @@
   grid-template-columns: 1fr 80px;
   border-bottom: 1px solid $light-color;
   background-color: #0d1821;
+  font-family: "bungee Hairline";
+  color: $light-color;
+
+  .mobile-name {
+    h1 {
+      margin: 0;
+      padding-left: 15px;
+    }
+  }
 
   li {
     list-style-type: none;
   }
   .hamburger-container {
     display: grid;
-    padding: 5px 5px 0px 0px;
+    padding: 5px;
   }
   img {
     border-radius: px;
@@ -22,6 +33,7 @@
   .mobile-name {
     display: grid;
     grid-template-columns: 80px 1fr;
+    height: 60px;
   }
 }
 

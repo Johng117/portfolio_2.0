@@ -7,9 +7,14 @@
 @import "./_name.scss";
 @import "./_not-found.scss";
 
+@font-face {
+    font-family: "400";
+    font-display: fallback;
+    src: url("../assets/fonts/BungeeHairline-Regular.ttf") format("ttf");
+  }
+
 body {
   height: 100%;
-  font-family: "quicksand";
   margin: 0;
 }
 
