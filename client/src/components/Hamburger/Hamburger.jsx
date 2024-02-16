@@ -1,6 +1,7 @@
 const Hamburger = ({ openMenu, isHamOpen }) => {
   // a function to change the state of hamburger icon when clicked.
   function handleHamClick(e) {
+    e.preventDefault()
     openMenu();
   }
 

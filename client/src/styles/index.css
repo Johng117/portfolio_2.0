@@ -122,14 +122,26 @@
   opacity: 0.5;
 }
 
+@media only screen and (min-width: 770px) {
+  .header-section {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+  }
+  .header-section .page-menu-container .menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .header-section .hamburger-container,
+  .header-section .menu-mobile-open {
+    display: none;
+  }
+}
 @media only screen and (max-width: 770px) {
   .header-section {
     display: grid;
-    grid-template-columns: 100px, 1fr;
-  }
-  .header-section .name-role-container .under {
-    position: absolute;
-    top: 10px;
   }
   .header-section .page-menu-container {
     display: none;
