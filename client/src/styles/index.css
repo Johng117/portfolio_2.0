@@ -66,9 +66,24 @@
   font-family: "bungee Hairline";
   color: #f0ebd8;
 }
-.header-section .mobile-name h1 {
-  margin: 0;
+.header-section .page-menu-container {
+  display: none;
+}
+.header-section .header-name {
+  margin: 0px;
   padding-left: 15px;
+  padding-top: 5px;
+  font-size: 20px;
+}
+.header-section .header-name .header-mobile-name,
+.header-section .header-name .header-full-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #f0ebd8;
+}
+.header-section .header-name .header-full-name {
+  display: none;
 }
 .header-section li {
   list-style-type: none;
@@ -76,11 +91,6 @@
 .header-section .hamburger-container {
   display: grid;
   padding: 5px;
-}
-.header-section .mobile-name {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  height: 60px;
 }
 
 .menu-mobile-open {
@@ -125,7 +135,16 @@
 @media only screen and (min-width: 770px) {
   .header-section {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 150px 1fr;
+  }
+  .header-section .header-name .header-mobile-name {
+    display: none;
+  }
+  .header-section .header-name .header-full-name {
+    display: inline-block;
+  }
+  .header-section .page-menu-container {
+    display: inline;
   }
   .header-section .page-menu-container .menu-list {
     display: flex;
@@ -135,21 +154,7 @@
     margin-bottom: 10px;
   }
   .header-section .hamburger-container,
-  .header-section .menu-mobile-open {
-    display: none;
-  }
-}
-@media only screen and (max-width: 770px) {
-  .header-section {
-    display: grid;
-  }
-  .header-section .page-menu-container {
-    display: none;
-  }
-  .projects-section {
-    height: auto;
-  }
-  .projects-section .desktop-cards {
+  .header-section .menu-mobile-open ul {
     display: none;
   }
 }

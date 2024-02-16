@@ -23,7 +23,7 @@ const Header = ({ animateOn }) => {
 
   return (
     <section className="header-section">
-      <MobName />
+      <MobName/>
       <MenuFull
         menuArray={menuArray}
         handlePageMenuClick={handlePageMenuClick}

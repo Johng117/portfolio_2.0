@@ -2,8 +2,9 @@
 
 const MobName = () => {
   return (
-    <div className="mobile-name">
-      <h1>JG</h1>
+    <div className="header-name">
+      <span className="header-mobile-name">JG</span>
+      <span className="header-full-name">John Gorman</span>
     </div>
   );
 };
