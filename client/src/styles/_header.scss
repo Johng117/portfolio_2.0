@@ -3,7 +3,6 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 80px;
-  // border-bottom: 1px solid $light-color;
   background-color: #0d1321;
   font-family: "bungee Hairline";
   color: $light-color;
@@ -33,10 +32,7 @@
 .menu-mobile-open {
   font-size: 20px;
   color: $light-color;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  display: flex;
-  justify-content: space-around;
+  height: 0px;
   background: #f0f4ef;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -45,6 +41,7 @@
   top: 60px;
   left: 25%;
   width: 50%;
+  
 
   ul {
     margin: 0;
@@ -54,12 +51,13 @@
 
   ul li {
     text-align: center;
+    background-color: $light-color;
     transition: all 0.5s ease-out;
   }
 
   ul li h5 {
     margin: 0;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bolder;
   }
 
