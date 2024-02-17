@@ -58,11 +58,10 @@
 }
 
 .header-section {
-  height: auto;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 80px;
-  background-color: #0d1321;
+  background-color: #328CC1;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -74,8 +73,8 @@
 }
 .header-section .header-name {
   margin: 0px;
-  padding-left: 17px;
-  padding-top: 17px;
+  padding-left: 30px;
+  padding-top: 30px;
 }
 .header-section .header-name .header-mobile-name,
 .header-section .header-name .header-full-name {
@@ -99,7 +98,7 @@
   background: #f0f4ef;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: #0d1321;
+  color: #328CC1;
   position: absolute;
   top: 60px;
   left: 25%;
@@ -128,13 +127,12 @@
 .menu-mobile-open ul li:hover {
   cursor: pointer;
   color: #f0ebd8;
-  background-color: #0d1321;
+  background-color: #328CC1;
   opacity: 0.5;
 }
 
 @media only screen and (min-width: 770px) {
   .header-section {
-    height: 60px;
     display: grid;
     grid-template-columns: 150px 1fr;
   }
@@ -381,33 +379,47 @@ button {
   flex-direction: column;
   text-align: center;
   padding-top: 200px;
-  color: #0d1321;
+  color: #328CC1;
   background: whitesmoke;
 }
 .not-found button {
   width: 200px;
 }
 
-body {
+.home-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   height: 100%;
+}
+.home-section .intro-name, .home-section .picture-social {
+  text-align: center;
+}
+.home-section .intro-name {
+  background-color: #328CC1;
+}
+.home-section .picture-social {
+  background-color: #0B3C5D;
+}
+
+.footer-section {
+  height: 10vh;
+  background-color: #0b3c5d;
+  color: #f0ebd8;
+}
+.footer-section p {
   margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.home-section,
-.about-section,
-.projects-section {
-  margin-top: 120px;
-  height: 650px;
-}
-.home-section h3,
-.about-section h3,
-.projects-section h3 {
-  margin: 0;
-}
-
-.home-section {
-  color: #f0ebd8;
+.App {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 7vh 1fr 7vh;
 }
 
 /*# sourceMappingURL=index.css.map */

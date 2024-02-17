@@ -6,6 +6,7 @@ import Header from "./components/Header/Header.jsx";
 import Home from "./components/Home/Home.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
 import { Routes, Route, Outlet } from "react-router-dom";
+import "./styles/index.css";
 
 function App() {
   const animateOn = useRef(0);

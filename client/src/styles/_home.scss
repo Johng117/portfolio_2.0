@@ -1,0 +1,84 @@
+.home-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+
+    .intro-name, .picture-social {
+        text-align: center;
+    }
+
+    .intro-name {
+        background-color: $primary-color;
+    }
+    .picture-social {
+        background-color: #0B3C5D;
+    }
+}
+
+
+
+
+//   .home-section,
+  //   .projects-section,
+  //   .about-section,
+  //   .footer-section {
+  //     margin-top: 100px;
+  //   }
+
+  //   .home-section {
+  //     .name-role-container {
+  //       flex-direction: row;
+  //       align-items: center;
+  //       width: 90%;
+  //       position: absolute;
+  //       top: 250px;
+  //       height: 60px;
+  //       margin-left: 15px;
+
+  //       .role,
+  //       .name {
+  //         padding-left: 10px;
+  //         line-height: 60px;
+  //         padding-top: 20px;
+  //       }
+
+  //       .role {
+  //         padding-top: 24px;
+  //       }
+
+  //       :nth-child(2) {
+  //         padding-left: 0px;
+  //       }
+  //       .letter,
+  //       .letter-role,
+  //       .under {
+  //         font-size: $title-text-size-full;
+  //       }
+
+  //       .static-content {
+  //         display: flex;
+  //         flex-direction: row;
+  //         gap: 10px;
+  //         padding-left: 27px;
+
+  //         .static-name,
+  //         .static-role {
+  //           font-size: $title-text-size-full;
+  //           margin: 0;
+  //           line-height: 60px;
+  //         }
+  //         .static-name {
+  //           font-family: "Bungee";
+  //         }
+  //         .static-role {
+  //           font-family: "Bungee Hairline";
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .projects-section {
+  //     .mob-cards {
+  //       display: none;
+  //     }
+  //   }
