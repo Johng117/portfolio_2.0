@@ -1,15 +1,26 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const MenuFull = ({ menuArray }) => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (str) => {
+    navigate(str);
+  };
+
   return (
     <section className="page-menu-container">
-      <ul className="menu-list" >
+      <ul className="menu-list">
         {menuArray.map((item, index) => {
           return (
             <li key={index}>
-              <Link to={item}>
-                <button>{item === "/" ? "home" : item}</button>
-              </Link>
+              <div
+                onClick={() => {
+                  handleNavigate(item);
+                }}
+                className="full-menu-item"
+              >
+                {item === "/" ? "home" : item}
+              </div>
             </li>
           );
         })}
