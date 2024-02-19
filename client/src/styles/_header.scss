@@ -16,7 +16,7 @@
   .header-name {
     margin: 0px;
     padding-left: 30px;
-    padding-top: 30px;
+    padding-top: 20px;
 
     .header-mobile-name,
     .header-full-name {
@@ -84,7 +84,7 @@
 @media only screen and (min-width: 770px) {
   .header-section {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 200px 1fr;
 
     .header-name {
       .header-mobile-name {

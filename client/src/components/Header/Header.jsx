@@ -7,7 +7,7 @@ import MobName from "../Mob-Name/MobName";
 const Header = ({ animateOn }) => {
   const [openMobMenu, setOpenMobMenu] = useState(false);
   const [isHamOpen, setIsHamOpen] = useState(false);
-  const menuArray = ["/", "projects", "about"];
+  const menuArray = ["/", "projects", "contact"];
 
   const openMenu = () => {
     setOpenMobMenu(!openMobMenu);
