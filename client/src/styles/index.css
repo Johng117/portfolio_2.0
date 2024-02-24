@@ -167,58 +167,48 @@
   }
 }
 .about-section {
-  padding: 75px;
+  padding: 20px 5px 5px 5px;
   display: grid;
-  grid-template-rows: 50px 500px;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
   gap: 5px;
 }
-.about-section .about-heading-container {
-  border: 1px dashed blue;
-}
-.about-section .text-form-container {
+.about-section .about-form {
   display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 5px;
-}
-.about-section .form-container {
-  padding: 15px 15px 15px 30px;
-}
-.about-section .form-container .about-form {
-  display: grid;
-  grid-auto-flow: row;
-  gap: 5px;
-  padding-top: 20px;
-  font-weight: 500;
+  padding: 20px 10px;
   color: #f0ebd8;
-  font-size: 18px;
+  box-sizing: border-box;
+  height: 500px;
+  min-width: 300px;
+  background-color: #0B3C5D;
+  margin: auto;
+  border-radius: 20px;
 }
-.about-section .form-container .about-form .name-error h5,
-.about-section .form-container .about-form .email-error h5,
-.about-section .form-container .about-form .message-error h5 {
+.about-section .about-form .name-error h5,
+.about-section .about-form .email-error h5,
+.about-section .about-form .message-error h5 {
   margin: 0;
-  height: 20px;
   color: #d8000c;
   background: #f0ebd8;
   width: 50%;
 }
-.about-section .form-container .input-name,
-.about-section .form-container .input-email {
+.about-section .input-name,
+.about-section .input-email {
   margin-left: 10px;
   border: 1px solid #0B3C5D;
   font-size: 16px;
-  font-family: "quicksand";
   background: #f0ebd8;
 }
-.about-section .form-container .message-container {
+.about-section .message-container {
   height: 200px;
 }
-.about-section .form-container .message-label {
+.about-section .message-label {
   display: grid;
   gap: 5px;
 }
-.about-section .form-container .message-label textarea {
+.about-section .message-label textarea {
   height: 150px;
-  width: 300px;
+  width: 100%;
   padding: 10px;
   border: 1px solid #0B3C5D;
   font-size: 16px;
@@ -226,7 +216,22 @@
   background-color: #f0ebd8;
   font-weight: 500;
 }
+.about-section .information {
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 20px;
+}
 
+@media only screen and (max-width: 770px) {
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .about-section .intro-name,
+  .about-section .picture-social {
+    background-color: #328CC1;
+  }
+}
 button {
   width: 100px;
   height: 38px;
@@ -400,14 +405,15 @@ button {
   grid-template-columns: 1fr 1fr;
   height: 100%;
 }
-.home-section .intro-name, .home-section .picture-social {
+.home-section .intro-name,
+.home-section .picture-social {
   text-align: center;
 }
 .home-section .intro-name {
   background-color: #328CC1;
 }
 .home-section .picture-social {
-  background-color: #0B3C5D;
+  background-color: #0b3c5d;
 }
 
 @media only screen and (max-width: 770px) {
@@ -415,7 +421,8 @@ button {
     display: grid;
     grid-template-columns: 1fr;
   }
-  .home-section .intro-name, .home-section .picture-social {
+  .home-section .intro-name,
+  .home-section .picture-social {
     background-color: #328CC1;
   }
 }
@@ -436,6 +443,7 @@ button {
 
 .App {
   min-height: 100vh;
+  width: 100%;
   display: grid;
   grid-template-rows: 60px 1fr 7vh;
   font-family: "Roboto", sans-serif;

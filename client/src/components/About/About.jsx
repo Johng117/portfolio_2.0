@@ -8,6 +8,7 @@ const About = () => {
   const [emailError, setEmailError] = useState(false);
   const [messageError, setMessageError] = useState(false);
 
+  console.log(nameError);
   // thanks message on submission
   // const [thanks, setThanks] = useState(false);
 
@@ -81,65 +82,67 @@ const About = () => {
 
   return (
     <section className="about-section">
-      <div className="about-heading-container">
-        <h3>About</h3>
-      </div>
-      <div className="text-form-container">
-        <div></div>
-        <div className="form-container">
-          <form className="about-form" onSubmit={handleSubmit}>
-            <div className="form-name">
-              <label htmlFor="name" className="name-label">
-                Name:
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="input-name"
-                  onChange={(e) => handleInputs(e)}
-                  value={inputs.name}
-                />
-              </label>
-            </div>
-            <div className="name-error">
-              {nameError && <h5>Error: Name to short.</h5>}
-            </div>
-            <div className="form-email">
-              <label htmlFor="name" className="email-label">
-                E-mail:
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  className="input-email"
-                  onChange={(e) => handleInputs(e)}
-                  value={inputs.email}
-                />
-              </label>
-            </div>
-            <div className="email-error">
-              {emailError && <h5>Error: Invalid email.</h5>}
-            </div>
-            <div className="message-container">
-              <label htmlFor="message" className="message-label">
-                Message:
-                <textarea
-                  name="message-content"
-                  className="message"
-                  id="message"
-                  onChange={(e) => handleInputs(e)}
-                  value={inputs.message}
-                />
-              </label>
-              <br />
-            </div>
-            <div className="message-error">
-              {messageError && <h5>Error: Message to short.</h5>}
-            </div>
-            <button>Send</button>
-          </form>
+      <form className="about-form" onSubmit={handleSubmit}>
+        <div className="form-name">
+          <label htmlFor="name" className="name-label">
+            Name:
+            <input
+              type="text"
+              id="name"
+              name="name"
+              className="input-name"
+              onChange={(e) => handleInputs(e)}
+              value={inputs.name}
+            />
+          </label>
         </div>
-      </div>
+        {nameError && (
+          <div className="name-error">
+            <h5>Error: Name to short.</h5>
+          </div>
+        )}
+
+        <div className="form-email">
+          <label htmlFor="name" className="email-label">
+            E-mail:
+            <input
+              type="text"
+              id="email"
+              name="email"
+              className="input-email"
+              onChange={(e) => handleInputs(e)}
+              value={inputs.email}
+            />
+          </label>
+        </div>
+        {emailError && (
+          <div className="email-error">
+            <h5>Error: Invalid email.</h5>
+          </div>
+        )}
+        <div className="message-container">
+          <label htmlFor="message" className="message-label">
+            Message:
+            <textarea
+              name="message-content"
+              className="message"
+              id="message"
+              onChange={(e) => handleInputs(e)}
+              value={inputs.message}
+            />
+          </label>
+          <br />
+        </div>
+
+        {messageError && (
+          <div className="message-error">
+            <h5>Error: Message to short.</h5>
+          </div>
+        )}
+
+        <button>Send</button>
+      </form>
+      <div className="information">information</div>
     </section>
   );
 };
