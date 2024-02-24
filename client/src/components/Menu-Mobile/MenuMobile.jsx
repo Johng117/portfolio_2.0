@@ -19,7 +19,12 @@ const MenuMobile = ({ menuArray, handleMobMenuClick }) => {
               transition={{ delay: 0.1 * index, ease: "linear" }}
               key={index}
             >
-              <h5 className={menuArray[index]} onClick={handleMobMenuClick}>
+              <h5
+                className={menuArray[index]}
+                onClick={() => {
+                  handleMobMenuClick(menuArray[index]);
+                }}
+              >
                 {menuArray[index] === "/" ? "home" : menuArray[index]}
               </h5>
             </motion.li>

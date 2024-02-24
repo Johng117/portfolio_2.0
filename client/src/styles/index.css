@@ -61,7 +61,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 80px;
-  background-color: #328CC1;
+  background-color: #0B3C5D;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -113,6 +113,7 @@
   text-align: center;
   background-color: #f0ebd8;
   transition: all 0.5s ease-out;
+  color: #0B3C5D;
 }
 .menu-mobile-open ul li h5 {
   margin: 0;
@@ -127,7 +128,7 @@
 .menu-mobile-open ul li:hover {
   cursor: pointer;
   color: #f0ebd8;
-  background-color: #328CC1;
+  background-color: #0B3C5D;
   opacity: 0.5;
 }
 
@@ -203,7 +204,7 @@
 .about-section .form-container .input-name,
 .about-section .form-container .input-email {
   margin-left: 10px;
-  border: 1px solid #394867;
+  border: 1px solid #0B3C5D;
   font-size: 16px;
   font-family: "quicksand";
   background: #f0ebd8;
@@ -219,7 +220,7 @@
   height: 150px;
   width: 300px;
   padding: 10px;
-  border: 1px solid #394867;
+  border: 1px solid #0B3C5D;
   font-size: 16px;
   font-family: "quicksand";
   background-color: #f0ebd8;
@@ -230,7 +231,7 @@ button {
   width: 100px;
   height: 38px;
   border-radius: 8px;
-  background-color: #394867;
+  background-color: #0B3C5D;
   color: #f0ebd8;
   font-size: 1rem;
   cursor: pointer;
@@ -238,22 +239,25 @@ button {
 
 .projects-section {
   display: grid;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: 50px 1fr;
   justify-items: center;
+  background-color: #0B3C5D;
+  height: 100%;
+  color: #f0ebd8;
 }
 .projects-section h3 {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .projects-section .mobile-card {
-  width: 340px;
-  height: 400px;
+  width: 320px;
+  height: 350px;
   padding: 30px 3px 3px 3px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .projects-section .mobile-card .summary {
   display: grid;
   grid-template-rows: 150px 100px 50px;
-  gap: 10px;
+  gap: 5px;
   height: 100%;
   width: 100%;
 }
@@ -316,6 +320,11 @@ button {
 }
 .projects-section .desktop-card-container .small-cards-container .active {
   opacity: 0.2;
+}
+@media only screen and (min-width: 770px) {
+  .mobile-card {
+    display: none;
+  }
 }
 .name-role-container {
   display: flex;
@@ -401,9 +410,18 @@ button {
   background-color: #0B3C5D;
 }
 
+@media only screen and (max-width: 770px) {
+  .home-section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .home-section .intro-name, .home-section .picture-social {
+    background-color: #328CC1;
+  }
+}
 .footer-section {
   height: 10vh;
-  background-color: #0b3c5d;
+  background-color: #328CC1;
   color: #f0ebd8;
 }
 .footer-section p {
@@ -420,6 +438,7 @@ button {
   min-height: 100vh;
   display: grid;
   grid-template-rows: 60px 1fr 7vh;
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,12 +1,6 @@
-import { useNavigate } from "react-router-dom";
 
-const MenuFull = ({ menuArray }) => {
-  const navigate = useNavigate();
-
-  const handleNavigate = (str) => {
-    navigate(str);
-  };
-
+const MenuFull = ({ menuArray, handlePageMenuClick }) => {
+  
   return (
     <section className="page-menu-container">
       <ul className="menu-list">
@@ -15,7 +9,7 @@ const MenuFull = ({ menuArray }) => {
             <li key={index}>
               <div
                 onClick={() => {
-                  handleNavigate(item);
+                  handlePageMenuClick(item);
                 }}
                 className="full-menu-item"
               >

@@ -15,7 +15,15 @@
     }
 }
 
-
+@media only screen and (max-width: 770px) {
+    .home-section {
+        display: grid;
+    grid-template-columns: 1fr;
+        .intro-name,.picture-social {
+            background-color: $primary-color;
+        }
+    }
+}
 
 
 //   .home-section,

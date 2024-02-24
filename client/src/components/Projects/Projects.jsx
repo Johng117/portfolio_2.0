@@ -1,5 +1,3 @@
-// import { useRef } from "react";
-// components
 import MobCards from "../Projects/MobCards";
 import DesktopCards from "./DesktopCards";
 
@@ -10,9 +8,9 @@ const Projects = () => {
       <div className="mob-cards">
         <MobCards />
       </div>
-      <div className="desktop-cards">
+      {/* <div className="desktop-cards">
         <DesktopCards />
-      </div>
+      </div> */}
     </section>
   );
 };

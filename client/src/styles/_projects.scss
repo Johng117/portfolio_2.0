@@ -1,23 +1,26 @@
 .projects-section {
   display: grid;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: 50px 1fr;
   justify-items: center;
+  background-color: $secondary-color;
+  height: 100%;
+  color: $light-color;
 
   h3 {
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   .mobile-card {
     // border: 1px solid red;
-    width: 340px;
-    height: 400px;
+    width: 320px;
+    height: 350px;
     padding: 30px 3px 3px 3px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     .summary {
       display: grid;
       grid-template-rows: 150px 100px 50px;
-      gap: 10px;
+      gap: 5px;
       height: 100%;
       width: 100%;
 
@@ -98,4 +101,11 @@
       
     }
   }
+}
+
+@media only screen and (min-width: 770px) {
+    .mobile-card {
+      display: none;
+    }
+
 }
