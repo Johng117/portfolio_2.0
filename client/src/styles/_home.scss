@@ -9,10 +9,10 @@
   }
 
   .intro-name {
-    background-color: $primary-color;
+    background-color: $background-colour;
   }
   .picture-social {
-    background-color: #0b3c5d;
+    background-color: $background-colour;
   }
 }
 
@@ -22,7 +22,7 @@
     grid-template-columns: 1fr;
     .intro-name,
     .picture-social {
-      background-color: $primary-color;
+      background-color: $background-colour;
     }
   }
 }

@@ -7,14 +7,20 @@
 
   .about-form {
     display: grid;
-    padding: 20px 10px;
+    grid-template-rows: 50px 50px 180px 80px;
+    gap: 10px;
+    padding: 30px 10px;
     color: $light-color;
     box-sizing: border-box;
     height: 500px;
     min-width: 300px;
-    background-color: $secondary-color;
+    background-color: $secondary-colour;
     margin: auto;
     border-radius: 20px;
+
+    .form-name, .form-email {
+      align-self: center;
+    }
 
     .name-error,
     .email-error,
@@ -31,11 +37,14 @@
   .input-name,
   .input-email {
     margin-left: 10px;
-    border: 1px solid $secondary-color;
+    height: 25px;
+    border: 1px solid $secondary-colour;
     font-size: 16px;
     background: $light-color;
   }
 
+
+  
   .message-container {
     height: 200px;
   }
@@ -47,7 +56,7 @@
       height: 150px;
       width: 100%;
       padding: 10px;
-      border: 1px solid $secondary-color;
+      border: 1px solid $secondary-colour;
       font-size: 16px;
       font-family: "quicksand";
       background-color: $light-color;
@@ -68,7 +77,7 @@
     grid-template-columns: 1fr;
     .intro-name,
     .picture-social {
-      background-color: $primary-color;
+      background-color: $background-colour;
     }
   }
 }

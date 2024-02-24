@@ -2,12 +2,12 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 80px;
-  background-color: #0B3C5D;
+  background-color: $background-colour;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 20px;
-  color: $light-color;
+  font-size: 22px;
+  color: $secondary-colour;
 
   .page-menu-container {
     display: none;
@@ -20,7 +20,7 @@
 
     .header-mobile-name,
     .header-full-name {
-      color: $light-color;
+      color: $secondary-colour;
     }
     .header-full-name {
       display: none;
@@ -38,12 +38,12 @@
 
 .menu-mobile-open {
   font-size: 20px;
-  color: $light-color;
+  color: $secondary-colour;
   height: 0px;
   background: #f0f4ef;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: $primary-color;
+  color: $background-colour;
   position: absolute;
   top: 60px;
   left: 25%;
@@ -57,17 +57,17 @@
 
   ul li {
     text-align: center;
-    background-color: $light-color;
+    background-color: $background-colour;
     transition: all 0.5s ease-out;
-    color: $secondary-color;
+    color: $secondary-colour;
 
   }
 
   ul li h5 {
     margin: 0;
     padding: 10px;
-    font-size: 18px;
-    font-weight: bolder;
+    font-size: 20px;
+    font-weight: 700;
   }
 
   ul li:last-child {
@@ -79,8 +79,7 @@
   ul li:hover {
     cursor: pointer;
     color: $light-color;
-    background-color: $secondary-color;
-    // border: 1px solid grey;
+    background-color: $secondary-colour;
     opacity: 0.5;
   }
 }
@@ -107,13 +106,13 @@
         margin-top: 0px;
         margin-bottom: 10px;
         padding: 17px 40px 0px 40px;
-        color: $light-color;
+        color: $secondary-colour;
 
         .full-menu-item {
           cursor: pointer;
         }
         .full-menu-item:hover {
-          border-bottom: 3px solid $light-color;
+          border-bottom: 3px solid $secondary-colour;
         }
       }
 
