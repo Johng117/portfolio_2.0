@@ -61,7 +61,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 80px;
-  background-color: lightgray;
+  background-color: #f7f7f7;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -98,7 +98,7 @@
   background: #f0f4ef;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: lightgray;
+  color: #f7f7f7;
   position: absolute;
   top: 60px;
   left: 25%;
@@ -111,7 +111,7 @@
 }
 .menu-mobile-open ul li {
   text-align: center;
-  background-color: lightgray;
+  background-color: #f7f7f7;
   transition: all 0.5s ease-out;
   color: #0b3c5d;
 }
@@ -167,27 +167,27 @@
   }
 }
 .about-section {
-  padding: 20px 5px 5px 5px;
+  padding: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
   gap: 5px;
+  align-items: center;
 }
 .about-section .about-form {
-  display: grid;
-  grid-template-rows: 50px 50px 180px 80px;
-  gap: 10px;
-  padding: 30px 10px;
-  color: #f0ebd8;
-  box-sizing: border-box;
   height: 500px;
-  min-width: 300px;
-  background-color: #0b3c5d;
-  margin: auto;
-  border-radius: 20px;
+  max-width: 400px;
+  margin: 30px auto;
+  background-color: #f7f7f7;
+  padding: 15px;
 }
-.about-section .about-form .form-name, .about-section .about-form .form-email {
-  align-self: center;
+.about-section .about-form h1 {
+  color: #f7f7f7;
+  text-align: center;
+  background-color: #0b3c5d;
+  padding: 10px;
+  font-weight: 400;
+  margin: -15px -15px 15px -15px;
 }
 .about-section .about-form .name-error h5,
 .about-section .about-form .email-error h5,
@@ -197,30 +197,31 @@
   background: #f0ebd8;
   width: 50%;
 }
-.about-section .input-name,
-.about-section .input-email {
-  margin-left: 10px;
+.about-section .about-form .input-name,
+.about-section .about-form .input-email {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #0b3c5d;
   height: 25px;
   border: 1px solid #0b3c5d;
   font-size: 16px;
-  background: #f0ebd8;
+  outline: none;
+  padding: 20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #ccc;
 }
-.about-section .message-container {
-  height: 200px;
-}
-.about-section .message-label {
-  display: grid;
-  gap: 5px;
-}
-.about-section .message-label textarea {
+.about-section .about-form textarea {
   height: 150px;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #0b3c5d;
   font-size: 16px;
   font-family: "quicksand";
-  background-color: #f0ebd8;
   font-weight: 500;
+  border: 1px solid #ccc;
+  outline: none;
 }
 .about-section .information {
   border: 1px solid red;
@@ -235,7 +236,7 @@
   }
   .about-section .intro-name,
   .about-section .picture-social {
-    background-color: lightgray;
+    background-color: #f7f7f7;
   }
 }
 button {
@@ -399,7 +400,7 @@ button {
   flex-direction: column;
   text-align: center;
   padding-top: 200px;
-  color: lightgray;
+  color: #f7f7f7;
   background: whitesmoke;
 }
 .not-found button {
@@ -416,10 +417,10 @@ button {
   text-align: center;
 }
 .home-section .intro-name {
-  background-color: lightgray;
+  background-color: #f7f7f7;
 }
 .home-section .picture-social {
-  background-color: lightgray;
+  background-color: #f7f7f7;
 }
 
 @media only screen and (max-width: 770px) {
@@ -429,12 +430,12 @@ button {
   }
   .home-section .intro-name,
   .home-section .picture-social {
-    background-color: lightgray;
+    background-color: #f7f7f7;
   }
 }
 .footer-section {
   height: 10vh;
-  background-color: lightgray;
+  background-color: #f7f7f7;
   color: #f0ebd8;
 }
 .footer-section p {

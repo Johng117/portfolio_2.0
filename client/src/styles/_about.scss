@@ -1,25 +1,25 @@
 .about-section {
-  padding: 20px 5px 5px 5px;
+  padding: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
   gap: 5px;
+  align-items: center;
 
   .about-form {
-    display: grid;
-    grid-template-rows: 50px 50px 180px 80px;
-    gap: 10px;
-    padding: 30px 10px;
-    color: $light-color;
-    box-sizing: border-box;
     height: 500px;
-    min-width: 300px;
-    background-color: $secondary-colour;
-    margin: auto;
-    border-radius: 20px;
+    max-width: 400px;
+    margin: 30px auto;
+    background-color: #f7f7f7;
+    padding: 15px;
 
-    .form-name, .form-email {
-      align-self: center;
+    h1 {
+      color: $background-colour;
+      text-align: center;
+      background-color: $secondary-colour;
+      padding: 10px;
+      font-weight: 400;
+      margin: -15px -15px 15px -15px;
     }
 
     .name-error,
@@ -32,35 +32,33 @@
         width: 50%;
       }
     }
-  }
 
-  .input-name,
-  .input-email {
-    margin-left: 10px;
-    height: 25px;
-    border: 1px solid $secondary-colour;
-    font-size: 16px;
-    background: $light-color;
-  }
-
-
-  
-  .message-container {
-    height: 200px;
-  }
-  .message-label {
-    display: grid;
-    gap: 5px;
+    .input-name,
+    .input-email {
+       width: 100%;
+      margin-bottom: 10px;
+      color: $secondary-colour;
+      height: 25px;
+      border: 1px solid $secondary-colour;
+      font-size: 16px;
+      outline: none;
+      padding: 20px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      border: 1px solid #ccc
+    }
 
     textarea {
       height: 150px;
       width: 100%;
-      padding: 10px;
+      padding: 5px;
       border: 1px solid $secondary-colour;
       font-size: 16px;
       font-family: "quicksand";
-      background-color: $light-color;
       font-weight: 500;
+      border: 1px solid #ccc;
+      outline: none;
     }
   }
 

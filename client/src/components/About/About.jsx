@@ -82,66 +82,60 @@ const About = () => {
 
   return (
     <section className="about-section">
-      <form className="about-form" onSubmit={handleSubmit}>
-        <div className="form-name">
-          <label htmlFor="name" className="name-label">
-            Name:
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="input-name"
-              onChange={(e) => handleInputs(e)}
-              value={inputs.name}
-            />
-          </label>
-        </div>
-        {nameError && (
-          <div className="name-error">
-            <h5>Error: Name to short.</h5>
-          </div>
-        )}
+      <div className="about-form">
+        <h1>Contact Me</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            className="input-name"
+            onChange={(e) => handleInputs(e)}
+            value={inputs.name}
+            placeholder="Your Name"
+          />
 
-        <div className="form-email">
-          <label htmlFor="name" className="email-label">
-            E-mail:
-            <input
-              type="text"
-              id="email"
-              name="email"
-              className="input-email"
-              onChange={(e) => handleInputs(e)}
-              value={inputs.email}
-            />
-          </label>
-        </div>
-        {emailError && (
-          <div className="email-error">
-            <h5>Error: Invalid email.</h5>
-          </div>
-        )}
-        <div className="message-container">
-          <label htmlFor="message" className="message-label">
-            Message:
-            <textarea
-              name="message-content"
-              className="message"
-              id="message"
-              onChange={(e) => handleInputs(e)}
-              value={inputs.message}
-            />
-          </label>
+          {nameError && (
+            <div className="name-error">
+              <h5>Error: Name to short.</h5>
+            </div>
+          )}
+
+          <input
+            type="text"
+            id="email"
+            name="email"
+            className="input-email"
+            onChange={(e) => handleInputs(e)}
+            value={inputs.email}
+            placeholder="Email Address"
+          />
+
+          {emailError && (
+            <div className="email-error">
+              <h5>Error: Invalid email.</h5>
+            </div>
+          )}
+
+          <textarea
+            name="message-content"
+            className="message"
+            id="message"
+            onChange={(e) => handleInputs(e)}
+            value={inputs.message}
+            placeholder="Your message"
+          />
           <br />
-        </div>
 
-        {messageError && (
-          <div className="message-error">
-            <h5>Error: Message to short.</h5>
-          </div>
-        )}
+          {messageError && (
+            <div className="message-error">
+              <h5>Error: Message to short.</h5>
+            </div>
+          )}
 
-        <button>Send</button>
-      </form>
+          <input type="submit" value="Send"></input>
+        </form>
+      </div>
       <div className="information">information</div>
     </section>
   );
