@@ -173,10 +173,11 @@
   height: 100%;
   gap: 5px;
   align-items: center;
+  font-family: "Roboto";
 }
 .about-section .about-form {
-  height: 500px;
   max-width: 400px;
+  width: 90%;
   margin: 30px auto;
   background-color: #f7f7f7;
   padding: 15px;
@@ -204,24 +205,30 @@
   color: #0b3c5d;
   height: 25px;
   border: 1px solid #0b3c5d;
-  font-size: 16px;
+  font-size: 14px;
   outline: none;
   padding: 20px;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   border: 1px solid #ccc;
 }
 .about-section .about-form textarea {
   height: 150px;
   width: 100%;
-  padding: 5px;
+  padding: 20px;
   border: 1px solid #0b3c5d;
-  font-size: 16px;
-  font-family: "quicksand";
-  font-weight: 500;
+  font-weight: light;
+  font-size: 15px;
+  font-family: "Roboto";
   border: 1px solid #ccc;
   outline: none;
+  margin-bottom: 10px;
+}
+.about-section .about-form .form-button {
+  width: 100%;
+  border-radius: 0;
+  border: none;
+}
+.about-section .about-form .form-button:hover {
+  opacity: 0.75;
 }
 .about-section .information {
   border: 1px solid red;

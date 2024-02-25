@@ -95,11 +95,7 @@ const About = () => {
             placeholder="Your Name"
           />
 
-          {nameError && (
-            <div className="name-error">
-              <h5>Error: Name to short.</h5>
-            </div>
-          )}
+          {nameError && <h5>Error: Name to short.</h5>}
 
           <input
             type="text"
@@ -111,11 +107,7 @@ const About = () => {
             placeholder="Email Address"
           />
 
-          {emailError && (
-            <div className="email-error">
-              <h5>Error: Invalid email.</h5>
-            </div>
-          )}
+          {emailError && <h5>Error: Invalid email.</h5>}
 
           <textarea
             name="message-content"
@@ -123,17 +115,15 @@ const About = () => {
             id="message"
             onChange={(e) => handleInputs(e)}
             value={inputs.message}
-            placeholder="Your message"
+            placeholder="Message"
           />
           <br />
 
-          {messageError && (
-            <div className="message-error">
-              <h5>Error: Message to short.</h5>
-            </div>
-          )}
+          {messageError && <h5>Error: Message to short.</h5>}
 
-          <input type="submit" value="Send"></input>
+          <button type="submit" className="form-button">
+            Send
+          </button>
         </form>
       </div>
       <div className="information">information</div>
