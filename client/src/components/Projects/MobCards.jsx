@@ -5,7 +5,6 @@ const MobCards = () => {
     return ( 
         <section className="mob-cards-container">
             <MobProjectCard/>
-            <MobProjectCard/>
         </section>
      );
 }

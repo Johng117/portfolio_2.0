@@ -1,8 +1,11 @@
 .header-section {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 80px;
-  background-color: $background-colour;
+  background-color: transparent;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -60,7 +63,6 @@
     background-color: $background-colour;
     transition: all 0.5s ease-out;
     color: $secondary-colour;
-
   }
 
   ul li h5 {
@@ -73,7 +75,6 @@
   ul li:last-child {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-  
   }
 
   ul li:hover {
@@ -115,7 +116,6 @@
           border-bottom: 3px solid $secondary-colour;
         }
       }
-
     }
 
     .hamburger-container,

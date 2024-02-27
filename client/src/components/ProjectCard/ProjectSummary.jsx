@@ -5,7 +5,7 @@ const ProjectSummary = ( { handleCardStatus } ) => {
     <section className="summary">
       <div className="project-pic"></div>
       <div className="project-brief">
-        <button className="info-button">
+        <button className="button">
           {/* <img src={info} className="info-logo" onClick={(e)=>handleCardStatus(e)} id="detail" alt="information 'i' logo"></img> */}
         </button>
       </div>

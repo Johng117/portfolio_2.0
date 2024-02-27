@@ -2,17 +2,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
+  color: $secondary-colour;
+  
 
   .intro-name,
   .picture-social {
+    padding: 20px;
     text-align: center;
+    border: 1px solid red;
+    margin: 60px 10px 60px 10px;
   }
 
   .intro-name {
-    background-color: $background-colour;
+    background-color: transparent;
   }
   .picture-social {
-    background-color: $background-colour;
+    background-color: transparent;
   }
 }
 
@@ -22,9 +27,16 @@
     grid-template-columns: 1fr;
     .intro-name,
     .picture-social {
-      background-color: $background-colour;
+      background-color: transparent;
+    }
+    .intro-name {
+      margin: 60px 20px 10px 20px
+    }
+    .picture-social {
+      margin: 10px 20px 20px 20px
     }
   }
+  
 }
 
 //   .home-section,

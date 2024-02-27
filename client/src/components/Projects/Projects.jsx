@@ -5,6 +5,7 @@ const Projects = () => {
   return (
     <section className="projects-section">
       <h3>Projects</h3>
+      
       <div className="mob-cards">
         <MobCards />
       </div>

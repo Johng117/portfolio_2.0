@@ -2,9 +2,9 @@
   display: grid;
   grid-template-rows: 50px 1fr;
   justify-items: center;
-  background-color: $secondary-colour;
   height: 100%;
-  color: $light-color;
+  color: $secondary-colour;
+  margin-top: 60px;
 
   h3 {
     padding-top: 10px;
@@ -12,7 +12,7 @@
 
   .mobile-card {
     // border: 1px solid red;
-    width: 320px;
+    width: 290px;
     height: 350px;
     padding: 30px 3px 3px 3px;
     margin-bottom: 10px;
@@ -28,15 +28,15 @@
       .project-brief,
       .project-link {
         border: 1px solid red;
+        border-radius: 10px;
       }
 
       .project-brief {
         display: flex;
         .info-button {
-          background: white;
           border: none;
-          cursor: pointer;
           margin: auto 0 0 auto;
+          color: $background-colour;
         }
 
         .info-logo {
@@ -88,7 +88,9 @@
         cursor: grab;
         // box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         // box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
       }
 
       .active {
@@ -98,14 +100,12 @@
     }
 
     .big-card-container {
-      
     }
   }
 }
 
 @media only screen and (min-width: 770px) {
-    .mobile-card {
-      display: none;
-    }
-
+  .mobile-card {
+    display: none;
+  }
 }
