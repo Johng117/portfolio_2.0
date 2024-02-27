@@ -1,4 +1,4 @@
-const TechPattern = () => {
+const TechPatternMobile = () => {
   return (
     // style = {{"enableBackground:new 0 0 1750 1000;"}}
 
@@ -34706,4 +34706,4 @@ const TechPattern = () => {
   );
 };
 
-export default TechPattern;
+export default TechPatternMobile;
