@@ -286,19 +286,19 @@
 .projects-section .mobile-card .summary .project-pic,
 .projects-section .mobile-card .summary .project-brief,
 .projects-section .mobile-card .summary .project-link {
-  border: 1px solid red;
-  border-radius: 10px;
+  border: 1px solid #0b3c5d;
+  border-radius: 5px;
 }
 .projects-section .mobile-card .summary .project-brief {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr 30px;
 }
-.projects-section .mobile-card .summary .project-brief .info-button {
-  border: none;
-  margin: auto 0 0 auto;
-  color: #f7f7f7;
-}
-.projects-section .mobile-card .summary .project-brief .info-logo {
-  height: 25px;
+.projects-section .mobile-card .summary .project-brief .button {
+  height: 28px;
+  justify-self: flex-end;
+  font-size: 85%;
+  margin-top: 2px;
+  border-radius: 5px;
 }
 .projects-section .mobile-card .detail {
   height: 100%;
